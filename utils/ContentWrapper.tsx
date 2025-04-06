@@ -5,7 +5,11 @@ interface ContentWrapperProps {
 }
 
 const ContentWrapper: React.FC<ContentWrapperProps> = ({ children }) => {
-  return <div className=" px-5rem py-2rem h-max w-[100%]">{children}</div>;
+  return (
+    <div className=" px-5rem py-2rem h-max w-[100%] flex justify-center items-center">
+      {children}
+    </div>
+  );
 };
 
 export default ContentWrapper;
