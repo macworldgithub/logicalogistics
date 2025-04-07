@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "../../Components/Navbar";
 import Footer from "../../Components/Footer";
+import Fta from "../../Components/fta";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -31,6 +32,7 @@ export default function RootLayout({
         <Navbar />
         {/* Padding top and bottom ensure content is not hidden behind fixed navbar and footer */}
         <main className="">{children}</main>
+        <Fta />
         <Footer />
       </body>
     </html>
