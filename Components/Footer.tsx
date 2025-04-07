@@ -1,12 +1,107 @@
-import React from "react";
+"use client";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFacebookF,
+  faInstagram,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
+import Image from "next/image";
+import { FaLinkedin } from "react-icons/fa";
+import { FaArrowRight } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bottom-0 left-0 right-0 bg-gray-100 shadow-inner p-4 text-center">
-      <p className="text-gray-600">
-        &copy; {new Date().getFullYear()} Your Company. All rights reserved.
-      </p>
-    </footer>
+    <div className="w-full h-auto bg-black">
+      <div className="bg-footerBlack h-auto">
+        <div className="pt-32 pb-10 px-8 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-8">
+          <div className="">
+            <Image
+              src="/logo.png"
+              width={100}
+              height={100}
+              alt="Logo"
+              className="mb-2"
+            />
+            <p className="text-sm max-w-xs leading-relaxed text-start md:text-xs text-white">
+              One of leading transportation and logistics providers over the
+              world
+            </p>
+            <div className="flex items-center gap-4 mt-4">
+              <FontAwesomeIcon
+                icon={faTwitter}
+                className="z-10 max-sm:w-5 text-white bg-orange-500"
+                size="2x"
+              />
+              <FaLinkedin size={22} className="text-white " />
+              <FontAwesomeIcon
+                icon={faFacebookF}
+                className="text-white"
+                size="1x"
+              />
+              <FontAwesomeIcon
+                icon={faInstagram}
+                className="z-10 max-sm:w-5 text-white"
+              />
+            </div>
+          </div>
+
+          <div className="text-start">
+            <h3 className="font-bold mb-4 text-[1.2rem] text-white">Service</h3>
+            <ul className="space-y-2 text-sm md:text-xs">
+              <li className="text-white hover:text-orange-500">Sea freight</li>
+              <li className="text-white hover:text-orange-500">Air freight</li>
+              <li className="text-white hover:text-orange-500">Rail freight</li>
+              <li className="text-white hover:text-orange-500">Land freight</li>
+              <li className="text-white hover:text-orange-500">Warehousing</li>
+              <li className="text-white hover:text-orange-500">
+                Custom clearance
+              </li>
+            </ul>
+          </div>
+
+          <div className="text-start">
+            <h3 className="mb-4 text-[1.2rem] font-bold text-white">
+              Contact us
+            </h3>
+            <ul className="space-y-2 text-sm md:text-xs">
+              <li className="text-white">Find Us Here</li>
+              <li className="text-white">Get In Touch</li>
+              <li className="text-white">FAQ Page</li>
+              <li className="text-white">Land freight</li>
+              <li className="text-white">Global Network</li>
+              <li className="text-white">Support 24/7</li>
+            </ul>
+          </div>
+
+          <div className="flex flex-col items-start text-secondaryColorDark">
+            <div className="text-start">
+              <h3 className="mb-4 text-[1.2rem] font-bold text-white">
+                Say in touch
+              </h3>
+              <div className="flex mb-4">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="flex-grow px-4 py-2 rounded-l-md text-white "
+                />
+                <button className="bg-orange-500 px-4 py-2 rounded-r-md hover:bg-orange-600">
+                  <FaArrowRight />
+                </button>
+              </div>
+
+              <p className="text-sm text-gray-300 mt-7">
+                Subscribe to receive our latest offers and news via your email
+                address
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="text-center border-t border-gray-800 py-4 text-sm text-white">
+          © Copyright 2025 - All Rights Reserved
+        </div>
+      </div>
+    </div>
   );
 };
 
