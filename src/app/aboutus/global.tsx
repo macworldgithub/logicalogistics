@@ -1,12 +1,14 @@
 'use client';
 import Image from 'next/image';
 import { useState } from 'react';
+import ContentWrapper from '../../../utils/ContentWrapper';
 
 const AboutCompany = () => {
   const [activeTab, setActiveTab] = useState<'mission' | 'vision'>('mission');
 
   return (
-    <section className="w-full flex flex-col lg:flex-row bg-white">
+    <ContentWrapper>
+          <section className="w-full flex flex-col lg:flex-row bg-white">
       {/* Left Section */}
       <div className="w-full lg:w-1/2 p-6 md:p-12 flex flex-col justify-between">
         {/* Heading */}
@@ -101,6 +103,7 @@ const AboutCompany = () => {
         />
       </div>
     </section>
+    </ContentWrapper>
   );
 };
 

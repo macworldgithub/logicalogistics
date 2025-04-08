@@ -32,11 +32,11 @@ const SidebarServices: FC = () => {
             return (
               <li
                 key={index}
-                className={`pl-3 border-l-2 text-sm cursor-pointer transition-all duration-200 ${
-                  isActive
-                    ? 'border-orange-600 text-black font-semibold'
-                    : 'border-transparent text-gray-500 hover:text-orange-600'
-                }`}
+                className={`pl-3 border-l-2 text-sm cursor-pointer transition-all duration-200
+                  ${isActive 
+                    ? 'border-orange-600 text-black font-semibold' 
+                    : 'border-gray-200 text-gray-500 hover:text-orange-600'
+                  }`}
                 onClick={() => router.push(service.href)}
               >
                 {service.label}
@@ -49,24 +49,16 @@ const SidebarServices: FC = () => {
       {/* Support Box */}
       <div className="relative rounded-lg overflow-hidden shadow-md">
         <Image
-          src="/support.png" // Make sure this image is placed in public/image.png
+          src="/support.png" // Make sure this image is in the /public folder
           alt="Support"
           width={400}
           height={300}
           className="w-full h-auto object-cover"
         />
-        {/* <div className="absolute inset-0 bg-black/50 flex flex-col justify-center items-start px-4 py-6">
-          <p className="text-white text-lg font-semibold mb-2">Do you need support?</p>
-          <button
-            onClick={() => router.push('/contact')}
-            className="bg-orange-500 hover:bg-orange-600 text-white text-sm px-4 py-2 rounded"
-          >
-            📞 Contact us now
-          </button>
-        </div> */}
       </div>
     </aside>
   );
 };
 
 export default SidebarServices;
+
