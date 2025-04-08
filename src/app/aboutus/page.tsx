@@ -1,8 +1,6 @@
 'use client';
 
 import React from 'react';
-
-// Corrected imports
 import PageWrapper from '../../../utils/PageWrapper';
 import GlobalError from './global';
 import AboutCompany from './company_stats';
