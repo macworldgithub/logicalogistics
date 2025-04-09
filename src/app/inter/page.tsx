@@ -1,39 +1,10 @@
-// import React from "react";
-// import Image from "next/image";
-// import Sider from "../../app/cartage/sider";
-// import Service from "../../app/container_movement/services";
-// const Page = () => {
-//   return (
-//     <div>
-//       <div className="w-[99vw] h-[50vw]  ">
-//         <div className="relative w-full h-1/2">
-//           <Image
-//             src="/home/BANNER.svg"
-//             alt="Home Banner"
-//             fill
-//             className="object-cover"
-//           />
-//         </div>
-//       </div>
-//       <div className="flex flex-row lg:px-32 md:px-4 max-md:px-4 ">
-//         <div className="max-sm:hidden">
-//           <Service />
-//         </div>
-//         <Sider />
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Page;
-
 // "use client";
 
 // import React from "react";
 // import PageWrapper from "../../../utils/PageWrapper";
 // import SidebarServices from "../../../common/services";
-// import Sider from "../cartage/sider";
 // import Image from "next/image";
+// import State from "../inter/state";
 // const Page = () => {
 //   return (
 //     <PageWrapper>
@@ -52,7 +23,7 @@
 //           <div className="flex flex-row">
 //             <SidebarServices />
 //             <div className="-mt-5">
-//               <Sider />
+//               <State />
 //             </div>
 //           </div>
 //         </div>
@@ -62,11 +33,12 @@
 // };
 
 // export default Page;
+
 "use client";
 
 import SidebarServices from "../../../common/services";
 import PageWrapper from "../../../utils/PageWrapper";
-import Sider from "../cartage/sider";
+import State from "../inter/state";
 
 const Page = () => {
   return (
@@ -80,7 +52,7 @@ const Page = () => {
 
           {/* Main Content */}
           <div className="max-sm:w-full w-3/4">
-            <Sider />
+            <State />
           </div>
         </div>
       </div>
