@@ -1,13 +1,6 @@
 'use client';
 
-import {
-  Clock,
-  BarChart2,
-  MonitorSmartphone,
-  ShieldCheck,
-  Headphones,
-  Truck,
-} from 'lucide-react';
+
 import Image from 'next/image';
 
 interface Feature {
