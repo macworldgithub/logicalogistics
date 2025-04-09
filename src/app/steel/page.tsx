@@ -1,9 +1,8 @@
 "use client";
 
-import SidebarServices from '../../../common/services';
-import PageWrapper from '../../../utils/PageWrapper';
-import FCLvsLCL from './diagram1';
-import FCLvsLCLDiagram2 from './diagram2';
+import SidebarServices from "../../../common/services";
+import PageWrapper from "../../../utils/PageWrapper";
+import Transfer from "../steel/transfer";
 
 const Page = () => {
   return (
@@ -17,8 +16,7 @@ const Page = () => {
 
           {/* Main Content */}
           <div className="max-sm:w-full w-3/4">
-            <FCLvsLCL />
-            <FCLvsLCLDiagram2 />
+            <Transfer />
           </div>
         </div>
       </div>
