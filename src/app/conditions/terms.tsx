@@ -26,13 +26,11 @@ const TermsAndConditions = () => {
 
             <h3 className="mb-4 py-4">2. CLIENT WARRANTIES</h3>
             <p className="mb-4">
-                We employ the use of cookies. By accessing The Supply Plug, you agreed to use cookies in agreement with the The Supply Plug's Privacy Policy.
-            </p>
-
-            <p className="mb-4">
-                Most interactive websites use cookies to let us retrieve the user’s details for each visit. Cookies are used by our website to enable the
-                functionality of certain areas to make it easier for people visiting our website. Some of our affiliate/advertising partners may also use cookies.
-            </p>
+            2.1 The Client warrants that:            </p>
+            <p>1. (a)  it is the owner of the Cargo or the authorised agent for the Cargo or otherwise is entitled to possess and part with</p>
+            <p></p>
+            <p></p>
+            <p></p>
 
             <h2 className="text-2xl font-semibold mt-8 mb-4">License</h2>
             <p className="mb-4">
