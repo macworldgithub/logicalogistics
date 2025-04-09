@@ -1,36 +1,9 @@
-// import React from "react";
-// import Image from "next/image";
-// import Lcl from "../../app/transport/lcl";
-
-// const Page = () => {
-//   return (
-//     <div>
-//       {/* Banner Section */}
-//       <div className="w-[99vw] h-[50vw]">
-//         <div className="relative w-full h-1/2">
-//           <Image
-//             src="/home/BANNER.svg"
-//             alt="Home Banner"
-//             fill
-//             className="object-cover"
-//           />
-//         </div>
-//       </div>
-
-//       {/* Content Section */}
-//       <Lcl />
-//     </div>
-//   );
-// };
-
-// export default Page;
-
 "use client";
 
 import React from "react";
 import PageWrapper from "../../../utils/PageWrapper";
 import SidebarServices from "../../../common/services";
-import Lcl from "../transport/lcl";
+import Container from "../movement/container";
 import Image from "next/image";
 const Page = () => {
   return (
@@ -50,7 +23,7 @@ const Page = () => {
           <div className="flex flex-row">
             <SidebarServices />
             <div className="-mt-5">
-              <Lcl />
+              <Container />
             </div>
           </div>
         </div>

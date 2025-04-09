@@ -27,16 +27,17 @@
 
 // export default Page;
 
-import React from "react";
-import Image from "next/image";
-import Sider from "../../app/cartage/sider";
-import Service from "../../app/container_movement/services";
+"use client";
 
+import React from "react";
+import PageWrapper from "../../../utils/PageWrapper";
+import SidebarServices from "../../../common/services";
+import Sider from "../cartage/sider";
+import Image from "next/image";
 const Page = () => {
   return (
-    <div>
-      {/* Banner Section */}
-      <div className="w-[99vw] h-[50vw]">
+    <PageWrapper>
+      <div className="w-[99vw] h-[50vw]  ">
         <div className="relative w-full h-1/2">
           <Image
             src="/home/BANNER.svg"
@@ -46,13 +47,17 @@ const Page = () => {
           />
         </div>
       </div>
-
-      {/* Content Section */}
-      <div className="flex flex-row   ">
-        <Service />
-        <Sider />
+      <div className="w-[99vw]">
+        <div className="w-[80%] mx-auto">
+          <div className="flex flex-row">
+            <SidebarServices />
+            <div className="-mt-5">
+              <Sider />
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </PageWrapper>
   );
 };
 

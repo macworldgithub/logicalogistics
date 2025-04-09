@@ -1,17 +1,16 @@
-'use client';
+"use client";
 
-import React from 'react';
-import PageWrapper from '../../../utils/PageWrapper';
-import SidebarServices from './services';
-
+import React from "react";
+import PageWrapper from "../../../utils/PageWrapper";
+import SidebarServices from '../../../common/services';
 const Page = () => {
   return (
     <PageWrapper>
-      <div>
-      <SidebarServices/>
+      <div className="w-[99vw]">
+        <div className="w-[80%] mx-auto"><SidebarServices/></div>
       </div>
     </PageWrapper>
-  )
-}
+  );
+};
 
-export default Page
+export default Page;

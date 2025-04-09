@@ -8,6 +8,7 @@ import {
   Headphones,
   Truck,
 } from 'lucide-react';
+import Image from 'next/image';
 
 interface Feature {
   icon: JSX.Element;
@@ -15,34 +16,37 @@ interface Feature {
   description: string;
 }
 
-const features: Feature[] = [
+const featuresTop: Feature[] = [
   {
-    icon: <BarChart2 className="w-8 h-8 text-orange-500" />,
+    icon: "/competitive.png",
     title: 'Competitive Rates',
     description: 'Offer low cost for transportation & logistics services',
   },
   {
-    icon: <Clock className="w-8 h-8 text-orange-500" />,
+    icon: "/time.png",
     title: 'Always On Time',
     description: 'Guarantee on-time delivery with all our customers',
   },
+];
+
+const featuresBottom: Feature[] = [
   {
-    icon: <MonitorSmartphone className="w-8 h-8 text-orange-500" />,
+    icon: "/tech.png",
     title: 'Advanced Technology',
     description: 'Enhance our performance with modern technology',
   },
   {
-    icon: <Truck className="w-8 h-8 text-orange-500" />,
+    icon: "/reliability.png",
     title: 'Fast And Reliable',
     description: 'A mandatory requirement for logistics companies',
   },
   {
-    icon: <Headphones className="w-8 h-8 text-orange-500" />,
+    icon: "/24support.png",
     title: '24/7 Support',
     description: 'We answer all your questions anytime you need us',
   },
   {
-    icon: <ShieldCheck className="w-8 h-8 text-orange-500" />,
+    icon: "/packaging.png",
     title: 'Safe Packaging',
     description: 'Ensure safety for cargo with our careful packaging',
   },
@@ -50,34 +54,45 @@ const features: Feature[] = [
 
 const SpecialFeatures = () => {
   return (
-    <section className="w-full py-14 bg-gray-50">
+    <section className="w-full py-16 bg-[#f9f9f9]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3">
-            What Make Us Special
-          </h2>
-          <p className="text-gray-500 text-sm sm:text-base max-w-2xl mx-auto">
-            Our strengths and advantages make us different from our competitors that meets all our customers' demand
-          </p>
+        {/* First Row */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12 items-center">
+          {/* Left Column - Heading */}
+          <div>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0c1f38] mb-4">
+              What Make Us Special
+            </h2>
+            <p className="text-[#5f6f81] text-base max-w-xl">
+              Our strengths and advantages make us different from our competitors that meets all our customers' demand
+            </p>
+          </div>
+
+          {/* Right Column - 2 Cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {featuresTop.map((feature, index) => (
+              <div
+                key={index}
+                className="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 text-center"
+              >
+                 <Image src={feature.icon} alt="Feature Icon" width={30} height={30} className="mb-4 mx-auto" />
+                <h3 className="text-lg font-bold text-[#0c1f38] mb-2">{feature.title}</h3>
+                <p className="text-[#5f6f81] text-sm">{feature.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
 
-        {/* Features Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {features.map((feature, index) => (
+        {/* Second Row - 4 Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {featuresBottom.map((feature, index) => (
             <div
               key={index}
-              className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col items-center text-center"
+              className="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 text-center"
             >
-              <div className="flex items-center justify-center w-16 h-16 rounded-full bg-orange-100 mb-4">
-                {feature.icon}
-              </div>
-              <h3 className="text-base md:text-lg font-semibold text-gray-900 mb-2">
-                {feature.title}
-              </h3>
-              <p className="text-gray-500 text-sm">
-                {feature.description}
-              </p>
+              <Image src={feature.icon} alt="Feature Icon" width={30} height={30} className="mb-4 mx-auto" />
+              <h3 className="text-lg font-bold text-[#0c1f38] mb-2">{feature.title}</h3>
+              <p className="text-[#5f6f81] text-sm">{feature.description}</p>
             </div>
           ))}
         </div>

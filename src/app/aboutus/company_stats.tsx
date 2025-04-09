@@ -1,6 +1,7 @@
 'use client';
 
 import { Truck, Users, Trophy, UserCheck } from 'lucide-react';
+import ContentWrapper from '../../../utils/ContentWrapper';
 
 interface Stat {
   icon: JSX.Element;
@@ -33,6 +34,7 @@ const stats: Stat[] = [
 
 const CompanyStats = () => {
   return (
+    <ContentWrapper>
     <section className="w-full py-12 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center">
@@ -46,6 +48,7 @@ const CompanyStats = () => {
         </div>
       </div>
     </section>
+    </ContentWrapper>
   );
 };
 
