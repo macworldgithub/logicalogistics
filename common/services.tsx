@@ -77,10 +77,10 @@ interface ServiceItem {
 
 const services: ServiceItem[] = [
   { label: "Container Movement", href: "/container_movement" },
-  { label: "Wharf Cartage", href: "/wharf_cartage" },
-  { label: "LCL Freight Movement", href: "/lcl_freight" },
+  { label: "Wharf Cartage", href: "/cartage" },
+  { label: "LCL Freight Movement", href: "/freight" },
   { label: "Inventory Management", href: "/inventory" },
-  { label: "Bio Security", href: "/bio_security" },
+  { label: "Bio Security", href: "/bio" },
 ];
 
 const SidebarServices: FC = () => {

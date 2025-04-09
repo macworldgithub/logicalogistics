@@ -5,9 +5,11 @@ import PageWrapper from "../../../utils/PageWrapper";
 import SidebarServices from "../../../common/services";
 import Service from "../local/service";
 import Image from "next/image";
+import PageHeader from "../../../common/PageHeader";
 const Page = () => {
   return (
     <PageWrapper>
+      <PageHeader title="Local" breadcrumb="Local" />
       <div className="w-[99vw] h-[50vw]  ">
         <div className="relative w-full h-1/2">
           <Image

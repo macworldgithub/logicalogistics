@@ -28,7 +28,7 @@ const FCLvsLCL = () => {
 
       <div className="mb-10">
         <Image
-          src="/container.png" 
+          src="/conta_move.png" 
           alt="Container Yard"
           width={700}
           height={400}
@@ -44,13 +44,13 @@ const FCLvsLCL = () => {
         centuries, but also the leap into electronic typesetting.
       </p>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 ">
         {diagramData.map((item, index) => (
           <div key={index} className="text-center">
             <Image
               src={item.image}
               alt={item.label}
-              width={600}
+              width={1200}
               height={400}
               className="mx-auto mb-2"
             />
