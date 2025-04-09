@@ -1,10 +1,28 @@
-import React from "react";
-import PageWrapper from "../../../utils/PageWrapper";
+'use client';
+
+import React from 'react';
+import PageWrapper from '../../../utils/PageWrapper';
+import GlobalError from './global';
+import AboutCompany from './company_stats';
+import SpecialFeatures from './special_features';
+import StaticImage from './static_Image';
+
 
 const Aboutus = () => {
   return (
     <PageWrapper>
-      <div>Aboutus</div>
+      <div className='w-[99vw]'>
+        <div className='w-[80%] mx-auto'>
+          <GlobalError />
+          <AboutCompany />
+          <SpecialFeatures />
+
+          {/* Reusable StaticImage component use kiya */}
+          <StaticImage src="/section4.png" alt="Container Ship Image" />
+          <StaticImage src="/section5.png" alt="Another Section Image" />
+
+        </div>
+      </div>
     </PageWrapper>
   );
 };
