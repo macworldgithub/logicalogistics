@@ -3,8 +3,8 @@
 // import React from "react";
 // import PageWrapper from "../../../utils/PageWrapper";
 // import SidebarServices from "../../../common/services";
-// import Container from "../movement/container";
 // import Image from "next/image";
+// import State from "../inter/state";
 // const Page = () => {
 //   return (
 //     <PageWrapper>
@@ -23,7 +23,7 @@
 //           <div className="flex flex-row">
 //             <SidebarServices />
 //             <div className="-mt-5">
-//               <Container />
+//               <State />
 //             </div>
 //           </div>
 //         </div>
@@ -39,12 +39,12 @@
 import PageHeader from "../../../common/PageHeader";
 import SidebarServices from "../../../common/services";
 import PageWrapper from "../../../utils/PageWrapper";
-import Container from "../movement/container";
+import Inventory from "../management/inventory";
 
 const Page = () => {
   return (
     <PageWrapper>
-      <PageHeader title="Container Movement" breadcrumb="Container Movement" />
+      <PageHeader title="Interstate" breadcrumb="Interstate" />
       <div className="w-full px-4 md:px-8 lg:px-12 max-w-7xl mx-auto">
         <div className="flex flex-col sm:flex-row gap-10">
           {/* Sidebar */}
@@ -54,7 +54,7 @@ const Page = () => {
 
           {/* Main Content */}
           <div className="max-sm:w-full w-3/4">
-            <Container />
+            <Inventory />
           </div>
         </div>
       </div>

@@ -47,7 +47,7 @@ const Navbar = () => {
             <Link href="/home" className="hover:text-blue-300">
               Home
             </Link>
-            <Link href="/about" className="hover:text-blue-300">
+            <Link href="/aboutus" className="hover:text-blue-300">
               About us
             </Link>
             <div className="relative group">

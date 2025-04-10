@@ -3,12 +3,12 @@
 import PageHeader from "../../../common/PageHeader";
 import SidebarServices from "../../../common/services";
 import PageWrapper from "../../../utils/PageWrapper";
-import It from "../solution/it";
+import Cross from "../docking/cross";
 
 const Page = () => {
   return (
     <PageWrapper>
-      <PageHeader title="IT Solutions" breadcrumb="IT Solutions" />
+      <PageHeader title="Cross Docking" breadcrumb="Fumigation" />
       <div className="w-full px-4 md:px-8 lg:px-12 max-w-7xl mx-auto">
         <div className="flex flex-col sm:flex-row gap-10">
           {/* Sidebar */}
@@ -18,7 +18,7 @@ const Page = () => {
 
           {/* Main Content */}
           <div className="max-sm:w-full w-3/4">
-            <It />
+            <Cross />
           </div>
         </div>
       </div>
