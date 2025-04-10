@@ -1,13 +1,12 @@
 "use client";
 import Image from "next/image";
-import React from "react";
 import {
+  FaBoxOpen,
   FaChartBar,
   FaClock,
   FaCogs,
-  FaTruckMoving,
   FaHeadset,
-  FaBoxOpen,
+  FaTruckMoving,
 } from "react-icons/fa";
 
 const Sider = () => {
