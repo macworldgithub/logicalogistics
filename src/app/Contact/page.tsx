@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { MapPin, Mail, Phone } from "lucide-react";
 import Navbar from "../../../Components/Navbar";
-import Footer from "../../../Components/Footer";
+// import Footer from "../../../Components/Footer";
 import cartage from "../assets/cartage.png";
 
 export default function Contact() {
