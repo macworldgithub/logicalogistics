@@ -14,7 +14,7 @@ const Aboutus = () => {
     <PageWrapper>
       <PageHeader title="About us" breadcrumb="About us" />
       <div className='w-[99vw]'>
-        <div className='w-[80%] mx-auto'>
+        <div className='w-[80%] mx-auto lg:mt-6'>
         
           <GlobalError />
           <AboutCompany />
