@@ -79,7 +79,7 @@ const Navbar = () => {
             <Link href="/services" className="hover:text-blue-300">
               Service
             </Link>
-            <Link href="/contact" className="hover:text-blue-300">
+            <Link href="/Contact" className="hover:text-blue-300">
               Contact
             </Link>
             <Link href="/blog" className="hover:text-blue-300">
@@ -90,7 +90,7 @@ const Navbar = () => {
           {/* Right: CTA button */}
           <div className="hidden md:block">
           <Link
-  href="/quote"
+  href="/quotepage"
   className="text-[#F26522] font-regular text-xs bg-[#FFF3EC]  px-3 py-2 rounded transition duration-300 hover:bg-[#F26522] hover:text-white"
 >
   Get a quote

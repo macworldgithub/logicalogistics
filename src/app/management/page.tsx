@@ -39,12 +39,14 @@
 import PageHeader from "../../../common/PageHeader";
 import SidebarServices from "../../../common/services";
 import PageWrapper from "../../../utils/PageWrapper";
-import Inventory from "../management/inventory";
-
+import System from "../management/system";
 const Page = () => {
   return (
     <PageWrapper>
-      <PageHeader title="Interstate" breadcrumb="Interstate" />
+      <PageHeader
+        title="Inventory Management"
+        breadcrumb="Inventory Management"
+      />
       <div className="w-full px-4 md:px-8 lg:px-12 max-w-7xl mx-auto">
         <div className="flex flex-col sm:flex-row gap-10">
           {/* Sidebar */}
@@ -54,7 +56,7 @@ const Page = () => {
 
           {/* Main Content */}
           <div className="max-sm:w-full w-3/4">
-            <Inventory />
+            <System />
           </div>
         </div>
       </div>

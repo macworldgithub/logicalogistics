@@ -11,7 +11,7 @@ import {
 } from "react-icons/fa";
 import ContentWrapper from "../../../utils/ContentWrapper";
 
-const Service = () => {
+const System = () => {
   return (
     <ContentWrapper>
       <div className="w-full flex flex-col items-center justify-center px-4 py-10">
@@ -129,4 +129,4 @@ const Service = () => {
   );
 };
 
-export default Service;
+export default System;
