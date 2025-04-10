@@ -68,7 +68,7 @@ export default function Contact() {
 
           {/* Right Form */}
           <form className="space-y-4">
-            <h3 className="font-bold text-lg">Send us message</h3>
+            <h3 className="font-bold text-md">Send us message</h3>
             <input
               type="text"
               placeholder="Full name"

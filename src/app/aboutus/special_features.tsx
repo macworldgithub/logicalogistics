@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-
-import Image from 'next/image';
+import Image from "next/image";
 
 interface Feature {
+
   icon: JSX.Element;
   title: string;
   description: string;
@@ -12,36 +12,36 @@ interface Feature {
 const featuresTop: Feature[] = [
   {
     icon: "/competitive.png",
-    title: 'Competitive Rates',
-    description: 'Offer low cost for transportation & logistics services',
+    title: "Competitive Rates",
+    description: "Offer low cost for transportation & logistics services",
   },
   {
     icon: "/time.png",
-    title: 'Always On Time',
-    description: 'Guarantee on-time delivery with all our customers',
+    title: "Always On Time",
+    description: "Guarantee on-time delivery with all our customers",
   },
 ];
 
 const featuresBottom: Feature[] = [
   {
     icon: "/tech.png",
-    title: 'Advanced Technology',
-    description: 'Enhance our performance with modern technology',
+    title: "Advanced Technology",
+    description: "Enhance our performance with modern technology",
   },
   {
     icon: "/reliability.png",
-    title: 'Fast And Reliable',
-    description: 'A mandatory requirement for logistics companies',
+    title: "Fast And Reliable",
+    description: "A mandatory requirement for logistics companies",
   },
   {
     icon: "/24support.png",
-    title: '24/7 Support',
-    description: 'We answer all your questions anytime you need us',
+    title: "24/7 Support",
+    description: "We answer all your questions anytime you need us",
   },
   {
     icon: "/packaging.png",
-    title: 'Safe Packaging',
-    description: 'Ensure safety for cargo with our careful packaging',
+    title: "Safe Packaging",
+    description: "Ensure safety for cargo with our careful packaging",
   },
 ];
 
@@ -57,7 +57,8 @@ const SpecialFeatures = () => {
               What Make Us Special
             </h2>
             <p className="text-[#5f6f81] text-base max-w-xl">
-              Our strengths and advantages make us different from our competitors that meets all our customers' demand
+              Our strengths and advantages make us different from our
+              competitors that meets all our customer&apos;s demand
             </p>
           </div>
 
@@ -68,8 +69,16 @@ const SpecialFeatures = () => {
                 key={index}
                 className="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 text-center"
               >
-                 <Image src={feature.icon} alt="Feature Icon" width={30} height={30} className="mb-4 mx-auto" />
-                <h3 className="text-lg font-bold text-[#0c1f38] mb-2">{feature.title}</h3>
+                <Image
+                  src={feature.icon}
+                  alt="Feature Icon"
+                  width={30}
+                  height={30}
+                  className="mb-4 mx-auto"
+                />
+                <h3 className="text-lg font-bold text-[#0c1f38] mb-2">
+                  {feature.title}
+                </h3>
                 <p className="text-[#5f6f81] text-sm">{feature.description}</p>
               </div>
             ))}
@@ -83,8 +92,16 @@ const SpecialFeatures = () => {
               key={index}
               className="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 text-center"
             >
-              <Image src={feature.icon} alt="Feature Icon" width={30} height={30} className="mb-4 mx-auto" />
-              <h3 className="text-lg font-bold text-[#0c1f38] mb-2">{feature.title}</h3>
+              <Image
+                src={feature.icon}
+                alt="Feature Icon"
+                width={30}
+                height={30}
+                className="mb-4 mx-auto"
+              />
+              <h3 className="text-lg font-bold text-[#0c1f38] mb-2">
+                {feature.title}
+              </h3>
               <p className="text-[#5f6f81] text-sm">{feature.description}</p>
             </div>
           ))}

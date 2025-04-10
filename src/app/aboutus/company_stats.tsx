@@ -2,9 +2,10 @@
 
 import { Truck, Users, Trophy, UserCheck } from 'lucide-react';
 import ContentWrapper from '../../../utils/ContentWrapper';
+import { ReactNode } from 'react';
 
 interface Stat {
-  icon: JSX.Element;
+  icon: ReactNode;
   value: string;
   label: string;
 }

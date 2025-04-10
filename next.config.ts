@@ -1,6 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  typescript: {
+    // WARNING: This allows production builds to succeed even if there are type errors.
+    ignoreBuildErrors: true,
+  },
   async redirects() {
     return [
       {

@@ -39,7 +39,7 @@ const FCLvsLCL = () => {
       <h3 className="text-xl font-semibold mb-3">FCL vs LCL – Diagram 1</h3>
       <p className="text-gray-600 mb-10 max-w-3xl">
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-        been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+        been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a
         galley of type and scrambled it to make a type specimen book. It has survived not only five
         centuries, but also the leap into electronic typesetting.
       </p>
