@@ -46,13 +46,13 @@ const Footer = () => {
           </div>
 
           <div className="text-start">
-            <h3 className="font-bold mb-4 text-[1.2rem] text-white">Service</h3>
+            <h3 className="font-bold mb-4 text-[1.2rem] text-white">Useful Links</h3>
             <ul className="space-y-2 text-sm md:text-xs">
-              <li className="text-white hover:text-orange-500">Sea freight</li>
-              <li className="text-white hover:text-orange-500">Air freight</li>
-              <li className="text-white hover:text-orange-500">Rail freight</li>
-              <li className="text-white hover:text-orange-500">Land freight</li>
-              <li className="text-white hover:text-orange-500">Warehousing</li>
+              <li className="text-white hover:text-orange-500">Home</li>
+              <li className="text-orange-500 underline">Terms and Condition</li>
+              <li className="text-white hover:text-orange-500">Application Form</li>
+              <li className="text-white hover:text-orange-500">Our Community/Team</li>
+              <li className="text-white hover:text-orange-500">Contact Us</li>
               <li className="text-white hover:text-orange-500">
                 Custom clearance
               </li>
@@ -67,8 +67,7 @@ const Footer = () => {
               <li className="text-white">Find Us Here</li>
               <li className="text-white">Get In Touch</li>
               <li className="text-white">FAQ Page</li>
-              <li className="text-white">Land freight</li>
-              <li className="text-white">Global Network</li>
+              <li className="text-white">Policies</li>
               <li className="text-white">Support 24/7</li>
             </ul>
           </div>
@@ -78,18 +77,18 @@ const Footer = () => {
               <h3 className="mb-4 text-[1.2rem] font-bold text-white">
                 Say in touch
               </h3>
-              <div className="flex mb-4">
+              <div className="flex mb-8">
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="flex-grow px-4 py-2 rounded-l-md text-white "
+                  className="flex-grow px-4 py-2 rounded-l-md text-Black bg-amber-50 "
                 />
                 <button className="bg-orange-500 px-4 py-2 rounded-r-md hover:bg-orange-600">
                   <FaArrowRight />
                 </button>
               </div>
 
-              <p className="text-sm text-gray-300 mt-7">
+              <p className="text-xs text-gray-300 mt-7">
                 Subscribe to receive our latest offers and news via your email
                 address
               </p>
@@ -98,7 +97,7 @@ const Footer = () => {
         </div>
 
         <div className="text-center border-t border-gray-800 py-4 text-sm text-white">
-          © Copyright 2025 - All Rights Reserved
+          © 2021ovatheme - All Rights Reserved
         </div>
       </div>
     </div>

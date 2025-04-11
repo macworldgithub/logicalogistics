@@ -1,12 +1,12 @@
+// Import Google Fonts and custom components
 import Image from "next/image";
 import { MapPin, Mail, Phone } from "lucide-react";
 import Navbar from "../../../Components/Navbar";
-// import Footer from "../../../Components/Footer";
 import cartage from "../assets/cartage.png";
 
 export default function Contact() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen font-poppins">
       <Navbar />
 
       {/* Hero Section */}
@@ -27,7 +27,7 @@ export default function Contact() {
       </div>
 
       {/* Contact Section */}
-      <div className="flex flex-col md:flex-row justify-center gap-32 items-start py-16 px-4  bg-white">
+      <div className="flex flex-col md:flex-row justify-center gap-32 items-start py-16 px-4 bg-white">
         {/* Left side: Contact Info */}
         <div className="flex-1 max-w-lg">
           <h2 className="text-2xl font-bold mb-4">Get in touch with us</h2>
