@@ -1,14 +1,15 @@
+// Import Google Fonts and custom components
 import Image from "next/image";
 import { MapPin, Mail, Phone } from "lucide-react";
 import Navbar from "../../../Components/Navbar";
-// import Footer from "../../../Components/Footer";
 import cartage from "../assets/cartage.png";
 
 export default function Contact() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen font-poppins">
       <Navbar />
 
+      {/* Hero Section */}
       <div className="relative w-full h-96">
         <Image
           src={cartage}
@@ -18,44 +19,45 @@ export default function Contact() {
           className="w-full"
         />
         <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-          <div className="text-left">
-            <h2 className="text-white text-2xl font-bold">Contact Us</h2>
-            <h3 className="text-white text-sm  mt-2">Home Contact us</h3>
+          <div className="text-center">
+            <h2 className="text-white text-4xl font-bold">Contact Us</h2>
+            <h3 className="text-white text-md mt-2">Home Contact us</h3>
           </div>
         </div>
       </div>
 
-      <div className="flex flex-col items-center py-12 px-4 md:px-20">
-        <h2 className="text-2xl font-bold mb-4">Get in touch with us</h2>
-        <p className="text-center max-w-2xl mb-8">
-          Contact us direct. Be prepared to fill out the form to receive a free
-          contact call back from our team.
-        </p>
+      {/* Contact Section */}
+      <div className="flex flex-col md:flex-row justify-center gap-32 items-start py-16 px-4 bg-white">
+        {/* Left side: Contact Info */}
+        <div className="flex-1 max-w-lg">
+          <h2 className="text-2xl font-bold mb-4">Get in touch with us</h2>
+          <p className="mb-10 text-sm">
+            Contact us on direct, by phone or fill out the form to receive a
+            free consultation from our enthusiastic staff.
+          </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 w-full max-w-6xl">
-          {/* Left Contact Info */}
-          <div className="space-y-6">
+          <div className="space-y-8 text-sm">
             <div className="flex items-start gap-4">
-              <Phone className="text-orange-500 mt-1" />
+              <Phone className="text-orange-500 w-5 h-5 mt-1" />
               <div>
-                <p>Phone Number</p>
-                <p className="font-extrabold text-1xl">+61 03 9452 8045</p>
+                <p className="text-sm font-medium">Phone number</p>
+                <p className="text-base font-extrabold">+61 03 9452 8045</p>
               </div>
             </div>
 
             <div className="flex items-start gap-4">
-              <Mail className="text-orange-500 mt-1" />
+              <Mail className="text-orange-500 w-5 h-5 mt-1" />
               <div>
-                <p>Email</p>
-                <p>info@ozshipping.com.au</p>
+                <p className="text-sm font-medium">Email</p>
+                <p className="text-sm">info@ozshipping.com.au</p>
               </div>
             </div>
 
             <div className="flex items-start gap-4">
-              <MapPin className="text-orange-500 mt-1" />
+              <MapPin className="text-orange-500 w-5 h-5 mt-1" />
               <div>
-                <p>Address</p>
-                <p className="font-semibold">
+                <p className="text-sm font-medium">Address</p>
+                <p className="font-bold text-sm leading-6">
                   454A NorthRoad Road,
                   <br />
                   Huntingdale, Australia,
@@ -65,36 +67,42 @@ export default function Contact() {
               </div>
             </div>
           </div>
-
-          {/* Right Form */}
-          <form className="space-y-4">
-            <h3 className="font-bold text-md">Send us message</h3>
-            <input
-              type="text"
-              placeholder="Full name"
-              className="w-full border-b p-2 focus:outline-none"
-            />
-
-            <input
-              type="text"
-              placeholder="Phone Number"
-              className="w-full border-b p-2 focus:outline-none"
-            />
-            <input
-              type="email"
-              placeholder="Email address"
-              className="w-full border-b p-2 focus:outline-none"
-            />
-            <textarea
-              placeholder="Message"
-              className="w-full border-b p-2 focus:outline-none"
-              rows={2}
-            />
-            <button className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">
-              Send message
-            </button>
-          </form>
         </div>
+
+        {/* Right side: Form */}
+        <form className="flex-1 max-w-md space-y-6">
+          <h3 className="font-bold text-md flex items-center gap-2 mb-2">
+            <Mail className="text-orange-500 w-4 h-4" /> Send us message
+          </h3>
+
+          <input
+            type="text"
+            placeholder="Full name"
+            className="w-full border-b border-black p-2 text-sm placeholder-gray-500 focus:outline-none"
+          />
+          <input
+            type="text"
+            placeholder="Phone Number"
+            className="w-full border-b border-black p-2 text-sm placeholder-gray-500 focus:outline-none"
+          />
+          <input
+            type="email"
+            placeholder="Email address"
+            className="w-full border-b border-black p-2 text-sm placeholder-gray-500 focus:outline-none"
+          />
+          <textarea
+            placeholder="Message"
+            rows={3}
+            className="w-full border-b border-black p-2 text-sm placeholder-gray-500 focus:outline-none resize-none"
+          />
+
+          <button
+            type="submit"
+            className="bg-orange-500 text-white text-sm px-5 py-2 rounded hover:bg-orange-600 flex items-center gap-2"
+          >
+            <span>➤</span> Send message
+          </button>
+        </form>
       </div>
 
       {/* Map Section */}
