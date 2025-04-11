@@ -1,27 +1,24 @@
-"use client";
-import React from "react";
 import Image from "next/image";
-
 const solutions = [
   {
     title: "Wharf Cartage",
-    image: "/wharf.jpg", // Replace with your actual file
+    image: "/sol1.png", // Replace with your actual file
   },
   {
     title: "Freight Movement",
-    image: "/freight.jpg",
+    image: "/sol2.png",
   },
   {
     title: "Bio Security",
-    image: "/bio.jpg",
+    image: "/sol3.png",
   },
   {
     title: "Inventory Management",
-    image: "/inventory.jpg",
+    image: "/sol4.png",
   },
   {
-    title: "Cross Docking",
-    image: "/dock.jpg",
+    title: "movement",
+    image: "/sol5.png",
   },
 ];
 
@@ -44,11 +41,6 @@ export default function SolutionsSection() {
               height={300}
               className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
             />
-            <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/70 to-transparent px-4 py-2">
-              <div className="text-sm text-white font-semibold flex items-center gap-2">
-                <span className="text-orange-500">▸</span> {item.title}
-              </div>
-            </div>
           </div>
         ))}
       </div>
