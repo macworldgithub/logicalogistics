@@ -1,6 +1,7 @@
 // components/TeamMembersSection.tsx
 import React from "react";
-import { FaTwitter, FaFacebookF, FaLinkedinIn } from "react-icons/fa";
+import { FaFacebookF, FaLinkedinIn, FaTwitter } from "react-icons/fa";
+import ContentWrapper from "../../../utils/ContentWrapper";
 
 interface TeamMember {
   name: string;
@@ -35,6 +36,7 @@ const team: TeamMember[] = [
 
 const TeamMembersSection: React.FC = () => {
   return (
+    <ContentWrapper>
     <section className="px-4 md:px-16 py-12 bg-white">
       <div className="text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-semibold text-black">Team members</h2>
@@ -43,11 +45,11 @@ const TeamMembersSection: React.FC = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
         {team.map((member, index) => (
           <div key={index} className="flex flex-col items-center text-center">
             {/* Profile image placeholder */}
-            <div className={`w-full aspect-square ${member.imageBg} rounded-md`} />
+            <div className={`w-full lg:w-50 aspect-square ${member.imageBg} rounded-md`} />
 
             {/* Name */}
             <h3
@@ -71,6 +73,7 @@ const TeamMembersSection: React.FC = () => {
         ))}
       </div>
     </section>
+    </ContentWrapper>
   );
 };
 

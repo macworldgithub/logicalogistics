@@ -5,18 +5,17 @@ import SolutionsSection from "./solution";
 import CompanyStats from "./stats";
 import TeamMembersSection from "./teamMember";
 import TransportationSection from "./transport";
+import ContactSection from "./contactSection";
+import NewsSection from "./NewSection"
+import OurNetwork from "./map"
+import QuoteBanner from "./banner"
+import PageWrapper from "../../../utils/PageWrapper";
 const Home = () => {
   return (
+    
     <div className="w-[99vw]">
-      <div className="relative w-full h-[50vw]">
-        <Image
-          src="/home/BANNER.svg"
-          alt="Home Banner"
-          fill
-          priority
-          className="object-cover"
-        />
-      </div>
+      <QuoteBanner/>
+      <PageWrapper>
       <div className="relative z-10">
         <CompanyStats />
         <TransportationSection />
@@ -25,10 +24,13 @@ const Home = () => {
         <StaticImage src="/section12.png" alt="Container Ship Image" />
         <TeamMembersSection/>
         <StaticImage src="/SECTION 11.png" alt="Container Ship Image" />
+        <ContactSection/>
+        <NewsSection/>
+        <OurNetwork/>
       </div>
+      </PageWrapper>
     </div>
     
   );
 };
-
 export default Home;

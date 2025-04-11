@@ -7,14 +7,15 @@ interface StaticImageProps {
 
 const StaticImage = ({ src, alt }: StaticImageProps) => {
   return (
-    <div className="w-full max-w-5xl mx-auto mt-10">
-      <Image
-        src={src}
-        alt={alt}
-        width={1200}
-        height={600}
-        className="rounded-lg object-cover"
-      />
+    <div className="w-full mt-10 px-4">
+      <div className="relative w-full h-[60vw] max-h-[450px] rounded-lg overflow-hidden">
+        <Image
+          src={src}
+          alt={alt}
+          fill
+          className="object-cover rounded-lg"
+        />
+      </div>
     </div>
   );
 };

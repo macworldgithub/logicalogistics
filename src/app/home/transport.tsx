@@ -1,6 +1,7 @@
 "use client"
 import React, {  useState } from "react";
 import Image from "next/image";
+import ContentWrapper from "../../../utils/ContentWrapper";
 
 const navItems = [
   {
@@ -18,7 +19,7 @@ const navItems = [
   },
   {
     label: "Container Movement",
-    icon: "/plane.png",
+    icon: "/Component 179.png",
     content: {
       description: "Efficient container movement tailored to your needs.",
       points: [
@@ -62,7 +63,8 @@ export default function TransportationSection() {
   const activeContent = navItems[activeIndex].content;
 
   return (
-    <section className="bg-white py-16 px-6 md:px-20">
+    <ContentWrapper>
+    <section className="bg-white py-16 px-6 md:px-20 mt-12">
       <h2 className="text-3xl md:text-4xl font-bold mb-12">Our transportation</h2>
 
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 border-b border-gray-200 pb-4 mb-10">
@@ -114,5 +116,6 @@ export default function TransportationSection() {
         </div>
       </div>
     </section>
+    </ContentWrapper>
   );
 }

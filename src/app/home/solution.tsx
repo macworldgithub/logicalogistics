@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ContentWrapper from '../../../utils/ContentWrapper';
 const solutions = [
   {
     title: "Wharf Cartage",
@@ -24,6 +25,7 @@ const solutions = [
 
 export default function SolutionsSection() {
   return (
+    <ContentWrapper>
     <section className="bg-white py-16 px-6 md:px-20">
       <h2 className="text-3xl md:text-4xl font-bold mb-4">Solutions we offer</h2>
       <p className="text-gray-600 mb-10 max-w-3xl">
@@ -39,11 +41,12 @@ export default function SolutionsSection() {
               alt={item.title}
               width={400}
               height={300}
-              className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 w-[99vm]"
             />
           </div>
         ))}
       </div>
     </section>
+    </ContentWrapper>
   );
 }
