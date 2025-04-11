@@ -46,12 +46,18 @@ const Footer = () => {
           </div>
 
           <div className="text-start">
-            <h3 className="font-bold mb-4 text-[1.2rem] text-white">Useful Links</h3>
+            <h3 className="font-bold mb-4 text-[1.2rem] text-white">
+              Useful Links
+            </h3>
             <ul className="space-y-2 text-sm md:text-xs">
               <li className="text-white hover:text-orange-500">Home</li>
               <li className="text-orange-500 underline">Terms and Condition</li>
-              <li className="text-white hover:text-orange-500">Application Form</li>
-              <li className="text-white hover:text-orange-500">Our Community/Team</li>
+              <li className="text-white hover:text-orange-500">
+                Application Form
+              </li>
+              <li className="text-white hover:text-orange-500">
+                Our Community/Team
+              </li>
               <li className="text-white hover:text-orange-500">Contact Us</li>
               <li className="text-white hover:text-orange-500">
                 Custom clearance

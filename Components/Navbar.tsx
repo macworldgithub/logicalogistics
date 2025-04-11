@@ -164,9 +164,9 @@ const Navbar = () => {
               </div>
             ))}
 
-            <Link href="/services" className="hover:text-blue-300 whitespace-nowrap">Service</Link>
+            {/* <Link href="/services" className="hover:text-blue-300 whitespace-nowrap">Service</Link> */}
             <Link href="/Contact" className="hover:text-blue-300 whitespace-nowrap">Contact</Link>
-            <Link href="/blog" className="hover:text-blue-300 whitespace-nowrap">Blog</Link>
+            {/* <Link href="/blog" className="hover:text-blue-300 whitespace-nowrap">Blog</Link> */}
           </div>
 
           {/* CTA */}
@@ -209,9 +209,9 @@ const Navbar = () => {
           <li><Link href="/aboutus" onClick={() => setIsDrawerOpen(false)}>About us</Link></li>
           <li><Link href="/page1" onClick={() => setIsDrawerOpen(false)}>Page 1</Link></li>
           <li><Link href="/page2" onClick={() => setIsDrawerOpen(false)}>Page 2</Link></li>
-          <li><Link href="/services" onClick={() => setIsDrawerOpen(false)}>Service</Link></li>
+          {/* <li><Link href="/services" onClick={() => setIsDrawerOpen(false)}>Service</Link></li> */}
           <li><Link href="/Contact" onClick={() => setIsDrawerOpen(false)}>Contact</Link></li>
-          <li><Link href="/blog" onClick={() => setIsDrawerOpen(false)}>Blog</Link></li>
+          {/* <li><Link href="/blog" onClick={() => setIsDrawerOpen(false)}>Blog</Link></li> */}
           <li>
             <Link
               href="/quotepage"
