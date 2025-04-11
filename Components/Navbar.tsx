@@ -48,8 +48,8 @@ const Navbar = () => {
           title: "Wharf Cartage",
           href: "/cartage",
           subItems: [
-            { title: "FCL Container Movement", href: "/fcl" },
-            { title: "LCL Breakbulk", href: "/lcl" },
+            { title: "FCL Container Movement", href: "/container_movement" },
+            { title: "LCL Breakbulk", href: "/transport" },
           ],
         },
         {
@@ -97,7 +97,7 @@ const Navbar = () => {
     {
       title: "Policies",
       subItems: [
-        { title: "Application Forms", href: "/ApplicationForm" },
+        { title: "Application Forms", href: "/communityPage" },
         { title: "Terms & Conditions", href: "/conditions" },
       ],
     },

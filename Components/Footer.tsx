@@ -70,11 +70,11 @@ const Footer = () => {
               Contact us
             </h3>
             <ul className="space-y-2 text-sm md:text-xs">
-              <li className="text-white">Find Us Here</li>
-              <li className="text-white">Get In Touch</li>
-              <li className="text-white">FAQ Page</li>
-              <li className="text-white">Policies</li>
-              <li className="text-white">Support 24/7</li>
+              <li className="text-white  hover:text-orange-500">Find Us Here</li>
+              <li className="text-white  hover:text-orange-500">Get In Touch</li>
+              <li className="text-white  hover:text-orange-500">FAQ Page</li>
+              <li className="text-white  hover:text-orange-500">Policies</li>
+              <li className="text-white  hover:text-orange-500">Support 24/7</li>
             </ul>
           </div>
 
