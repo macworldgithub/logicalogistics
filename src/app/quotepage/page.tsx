@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Navbar from "../../../Components/Navbar";
-import Footer from "../../../Components/Footer";
+// import Footer from "../../../Components/Footer";
 import cartage from "../assets/cartage.png";
 import { FaShieldAlt, FaClock, FaLock, FaArrowRight } from "react-icons/fa";
 
