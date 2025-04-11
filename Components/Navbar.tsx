@@ -4,12 +4,13 @@ import React, { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { FaChevronDown } from "react-icons/fa";
+import { FaChevronDown, FaChevronRight } from "react-icons/fa";
 
 const Navbar = () => {
   const pathname = usePathname();
   const [isAtTop, setIsAtTop] = useState(true);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const [openMenuIndex, setOpenMenuIndex] = useState<number | null>(null); // Update to allow null or index
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,6 +21,18 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      const target = e.target as HTMLElement | null;
+      if (target && !target.closest(".nav-menu-item")) {
+        setOpenMenuIndex(null); // Reset open menu when clicking outside
+      }
+    };
+
+    document.addEventListener("click", handleClickOutside);
+    return () => document.removeEventListener("click", handleClickOutside);
+  }, []);
+
   const navClasses =
     pathname === "/home"
       ? isAtTop
@@ -27,32 +40,72 @@ const Navbar = () => {
         : "bg-white shadow-md text-gray-700"
       : "bg-white shadow-md text-gray-700";
 
-  // Dropdown menus
   const menuItems = [
     {
       title: "Transportation",
       subItems: [
-        { title: "Wharf Cartage", href: "/page1" },
-        { title: "Container Movement", href: "/page2" },
-        { title: "LCL Freight Movement", href: "/page3" },
+        {
+          title: "Wharf Cartage",
+          href: "/cartage",
+          subItems: [
+            { title: "FCL Container Movement", href: "/fcl" },
+            { title: "LCL Breakbulk", href: "/lcl" },
+          ],
+        },
+        {
+          title: "Container Movement",
+          href: "/movement",
+          subItems: [
+            { title: "Local", href: "/local" },
+            { title: "InterState", href: "/inter" },
+          ],
+        },
+        { title: "LCL Freight Movement",
+           href: "/freight",
+          subItems: [
+            { title: "Steel", href: "/steel" },
+          ],
+
+         },
       ],
     },
     {
       title: "Warehouse & Distribution",
       subItems: [
-        { title: "Bio Security ", href: "/BioSecurity" },
-        { title: "Inventory Management", href: "/inventory" },
-        { title: "Cross Docking", href: "/CrossDocking" },
+        { title: "Bio Security", 
+          href: "/bio",
+          
+          subItems: [
+            { title: "Inspections", href: "/inspection" },
+            { title: "Fumigation", href: "/fumigation" },
+            { title: "Dairy & Fish Export Permit", href: "/fish" },
+          ],
+
+
+         },
+        { title: "Inventory Management", 
+          href: "/management" ,
+          subItems: [
+            { title: "It Solutions", href: "/solution" },
+           
+          ],
+        },
+
+        { title: "Cross Docking", href: "/docking" },
       ],
     },
     {
       title: "Policies",
       subItems: [
         { title: "Application Forms", href: "/ApplicationForm" },
-        { title: "Terms & Conditions", href: "/terms" },
+        { title: "Terms & Conditions", href: "/conditions" },
       ],
     },
   ];
+
+  const handleMenuClick = (index: number) => {
+    setOpenMenuIndex(prev => (prev === index ? null : index));
+  };
 
   return (
     <>
@@ -72,22 +125,42 @@ const Navbar = () => {
             <Link href="/aboutus" className="hover:text-blue-300 whitespace-nowrap">About</Link>
 
             {menuItems.map((menu, index) => (
-              <div className="relative group" key={index}>
-                <button className="hover:text-blue-300 flex items-center gap-1 whitespace-nowrap">
+              <div className="relative nav-menu-item" key={index}>
+                <button
+                  onClick={() => handleMenuClick(index)}
+                  className="hover:text-blue-300 flex items-center gap-1 whitespace-nowrap"
+                >
                   {menu.title}
                   <FaChevronDown className="text-xs mt-0.5" />
                 </button>
-                <div className="absolute hidden group-hover:block bg-white text-gray-700 shadow-lg mt-2 rounded w-56 py-2 z-50 space-y-1">
-                  {menu.subItems.map((item, idx) => (
-                    <Link
-                      key={idx}
-                      href={item.href}
-                      className="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap"
-                    >
-                      {item.title}
-                    </Link>
-                  ))}
-                </div>
+                {openMenuIndex === index && (
+                  <div className="absolute bg-white text-gray-700 shadow-lg mt-2 rounded w-64 py-2 z-50">
+                    {menu.subItems.map((item, idx) => (
+                      <div key={idx} className="group relative">
+                        <Link
+                          href={item.href}
+                          className="flex justify-between items-center px-4 py-2 hover:bg-gray-100 whitespace-nowrap"
+                        >
+                          {item.title}
+                          {item.subItems && <FaChevronRight className="text-xs ml-2" />}
+                        </Link>
+                        {item.subItems && openMenuIndex === index && (
+                          <div className="absolute left-full top-0 bg-white shadow-lg rounded w-56 py-2 hidden group-hover:block">
+                            {item.subItems.map((sub, i) => (
+                              <Link
+                                key={i}
+                                href={sub.href}
+                                className="block px-4 py-2 hover:bg-gray-100"
+                              >
+                                {sub.title}
+                              </Link>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
             ))}
 
