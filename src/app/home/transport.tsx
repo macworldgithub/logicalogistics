@@ -7,7 +7,7 @@ import ContentWrapper from "../../../utils/ContentWrapper";
 const navItems = [
   {
     label: "Wharf Cartage",
-    icon: "/vector.png",
+    icon: "/Vector.png",
     content: {
       description: "Transportation is offered from home to abroad and vice versa for clients.",
       points: [
@@ -85,7 +85,7 @@ export default function TransportationSection() {
 
   return (
     <ContentWrapper>
-      <section className="bg-white py-16 px-6 md:px-20 mt-12">
+      <section className="bg-white  px-6 md:px-20 ">
         <h2 className="text-3xl md:text-4xl font-bold mb-12">Our transportation</h2>
 
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 border-b border-gray-200 pb-4 mb-10">
