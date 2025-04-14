@@ -1,4 +1,3 @@
-import Image from "next/image";
 import StaticImage from "./image";
 import ProcessSection from "./process";
 import SolutionsSection from "./solution";
