@@ -5,7 +5,7 @@ import Navbar from "../../../Components/Navbar";
 // import cartage from "../assets/cartage.png";
 // import SidebarServices from "../../../common/services";
 import PageHeader from "../../../common/PageHeader";
-import PageWrapper from "../../../utils/PageWrapper";
+// import PageWrapper from "../../../utils/PageWrapper";
 
 export default function Contact() {
   return (
