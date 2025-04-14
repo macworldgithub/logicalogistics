@@ -6,7 +6,7 @@ interface PageWrapperProps {
 
 const PageWrapper: React.FC<PageWrapperProps> = ({ children }) => {
   return (
-    <div className="container w-[100%] min-h-[100vh] h-max  mt-16">
+    <div className="container w-[100%] min-h-[100vh] h-max px-8 py-4  mt-16">
       {children}
     </div>
   );
