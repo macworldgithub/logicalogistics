@@ -39,7 +39,7 @@ const QuoteBanner = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prev) => (prev + 1) % images.length);
-    }, 1000); // Change image every 1 seconds
+    }, 3000); // Change image every 1 seconds
 
     return () => clearInterval(interval);
   }, []);

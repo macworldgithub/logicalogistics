@@ -28,7 +28,7 @@ const navItems = [
         "Secure port-to-port handling",
         "Optimized scheduling system"
       ],
-      image: "/vehical.png"
+      image: "/movement.png"
     }
   },
   {
@@ -41,7 +41,7 @@ const navItems = [
         "Safe storage and handling",
         "Extensive logistics network"
       ],
-      image: "/vehical.png"
+      image: "/freight22.png"
     }
   },
   {
@@ -134,7 +134,7 @@ export default function TransportationSection() {
               alt="Transportation"
               width={600}
               height={400}
-              className="rounded shadow-md w-full h-auto"
+              className="rounded shadow-md object-fill h-[300px] w-[450px]"
             />
           </div>
         </div>

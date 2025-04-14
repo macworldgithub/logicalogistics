@@ -111,7 +111,7 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/home" className="flex items-center gap-2">
-              <Image src="/logo.png" alt="Logo" width={64} height={64} />
+              <Image src="/logo.png" alt="Logo" width={100} height={100} />
               <span className="font-bold text-xl text-white md:text-gray-900"></span>
             </Link>
           </div>
@@ -120,13 +120,13 @@ const Navbar = () => {
           <div className="absolute left-1/2 transform -translate-x-1/2 hidden md:flex items-center space-x-8 text-sm font-medium">
             <Link
               href="/home"
-              className="hover:text-blue-300 whitespace-nowrap"
+              className="hover:text-orange-400 whitespace-nowrap"
             >
               Home
             </Link>
             <Link
               href="/aboutus"
-              className="hover:text-blue-300 whitespace-nowrap"
+              className="hover:text-orange-400 whitespace-nowrap"
             >
               About
             </Link>
@@ -135,7 +135,7 @@ const Navbar = () => {
               <div className="relative nav-menu-item" key={index}>
                 <button
                   onClick={() => handleMenuClick(index)}
-                  className="hover:text-blue-300 flex items-center gap-1 whitespace-nowrap"
+                  className="hover:text-orange-400 flex items-center gap-1 whitespace-nowrap"
                 >
                   {menu.title}
                   <FaChevronDown className="text-xs mt-0.5" />
@@ -146,7 +146,7 @@ const Navbar = () => {
                       <div key={idx} className="group relative">
                         <Link
                           href={item.href}
-                          className="flex justify-between items-center px-4 py-2 hover:bg-gray-100 whitespace-nowrap"
+                          className="flex justify-between items-center px-4 py-2 hover:bg-[#f27929] hover:text-white whitespace-nowrap"
                         >
                           {item.title}
                           {item.subItems && (
@@ -159,7 +159,7 @@ const Navbar = () => {
                               <Link
                                 key={i}
                                 href={sub.href}
-                                className="block px-4 py-2 hover:bg-gray-100"
+                                className="block px-4 py-2 hover:bg-[#f27929] hover:text-white"
                               >
                                 {sub.title}
                               </Link>
@@ -176,7 +176,7 @@ const Navbar = () => {
             {/* <Link href="/services" className="hover:text-blue-300 whitespace-nowrap">Service</Link> */}
             <Link
               href="/Contact"
-              className="hover:text-blue-300 whitespace-nowrap"
+              className="hover:text-orange-400 whitespace-nowrap"
             >
               Contact
             </Link>

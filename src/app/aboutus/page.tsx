@@ -17,7 +17,7 @@ const Aboutus = () => {
         <div className='w-[80%] mx-auto lg:mt-6'>
         
           <GlobalError />
-          <AboutCompany />
+          {/* <AboutCompany /> */}
           <SpecialFeatures />
 
           {/* Reusable StaticImage component use kiya */}
