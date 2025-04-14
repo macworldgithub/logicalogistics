@@ -7,7 +7,7 @@ import ContentWrapper from "../../../utils/ContentWrapper";
 const navItems = [
   {
     label: "Wharf Cartage",
-    icon: "/Component 179.png",
+    icon: "/vector.png",
     content: {
       description: "Transportation is offered from home to abroad and vice versa for clients.",
       points: [
