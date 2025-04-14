@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const QuoteBanner = () => {
   const router = useRouter();
@@ -28,14 +28,31 @@ const QuoteBanner = () => {
     }
   };
 
+  // Slideshow logic
+  const images = [
+    "/home/BANNER.svg",
+    "/home/banner2.jpeg",
+    "/home/banner3.jpeg",
+  ];
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % images.length);
+    }, 1000); // Change image every 1 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="relative w-full h-[85vh] overflow-hidden">
-      {/* Background Image */}
+      {/* Background Image Swapper */}
       <Image
-        src="/home/BANNER.svg"
+        src={images[currentImageIndex]}
         alt="Banner Background"
         fill
-        className="object-cover object-center"
+        className="object-cover object-center transition-opacity duration-1000 ease-in-out"
+        priority
       />
 
       {/* Overlay */}
@@ -91,6 +108,22 @@ const QuoteBanner = () => {
             GET A QUOTE
           </button>
         </form>
+      </div>
+
+      {/* Dots at the bottom center */}
+      <div className="absolute bottom-4 w-full flex justify-center z-30">
+        <div className="flex gap-2">
+          {images.map((_, index) => (
+            <div
+              key={index}
+              className={`w-3 h-3 rounded-full ${
+                index === currentImageIndex
+                  ? "bg-white"
+                  : "bg-white/50"
+              } transition-colors duration-300`}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
