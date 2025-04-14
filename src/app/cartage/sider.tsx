@@ -71,12 +71,11 @@ const Sider = () => {
           Our fleet consist of a multitude of trailers such as side-loaders, and
           skels both retractable and non-retractable.
         </p>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
-      
           <div>
             <Image
-              src="/splash.png" 
+              src="/splash.png"
               alt="Container Ship at Port"
               width={800}
               height={600}
@@ -84,10 +83,9 @@ const Sider = () => {
             />
           </div>
 
-       
           <div className="flex flex-col gap-4">
             <Image
-              src="/truck.png" 
+              src="/truck.png"
               alt="Fleet Trucks"
               width={400}
               height={280}
@@ -103,7 +101,6 @@ const Sider = () => {
           </div>
         </div>
 
-      
         <div className="w-full max-w-4xl mx-auto">
           <h3 className="text-2xl font-bold mb-4 text-black">
             24 hour wharf to Door Capabilities
@@ -118,7 +115,6 @@ const Sider = () => {
             containers just in transit.
           </p>
 
-          
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-sm text-black mb-6">
             <div className="flex items-center gap-3">
               <FaChartBar className="text-orange-500 text-xl" />

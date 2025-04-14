@@ -9,14 +9,15 @@ const navItems = [
     label: "Wharf Cartage",
     icon: "/Vector.png",
     content: {
-      description: "Transportation is offered from home to abroad and vice versa for clients.",
+      description:
+        "Transportation is offered from home to abroad and vice versa for clients.",
       points: [
         "Standard operating procedures for vehicle maintenance",
         "Journey management plan",
-        "Standard operating procedures for loading"
+        "Standard operating procedures for loading",
       ],
-      image: "/vehical.png"
-    }
+      image: "/vehical.png",
+    },
   },
   {
     label: "Container Movement",
@@ -26,37 +27,39 @@ const navItems = [
       points: [
         "Real-time container tracking",
         "Secure port-to-port handling",
-        "Optimized scheduling system"
+        "Optimized scheduling system",
       ],
-      image: "/movement.png"
-    }
+      image: "/movement.png",
+    },
   },
   {
     label: "LCL Freight Movement",
     icon: "/lcl.png",
     content: {
-      description: "Flexible LCL freight solutions for cost-effective delivery.",
+      description:
+        "Flexible LCL freight solutions for cost-effective delivery.",
       points: [
         "Shared cargo load options",
         "Safe storage and handling",
-        "Extensive logistics network"
+        "Extensive logistics network",
       ],
-      image: "/freight22.png"
-    }
+      image: "/freight22.png",
+    },
   },
   {
     label: "Freight Movement",
     icon: "/bus.png",
     content: {
-      description: "Transportation is offered from home to abroad and vice versa for clients.",
+      description:
+        "Transportation is offered from home to abroad and vice versa for clients.",
       points: [
         "Standard operating procedures for vehicle maintenance",
         "Journey management plan",
-        "Standard operating procedures for loading"
+        "Standard operating procedures for loading",
       ],
-      image: "/vehical.png"
-    }
-  }
+      image: "/cargo.png",
+    },
+  },
 ];
 
 export default function TransportationSection() {
@@ -86,7 +89,9 @@ export default function TransportationSection() {
   return (
     <ContentWrapper>
       <section className="bg-white  px-6 md:px-20 ">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12">Our transportation</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-12">
+          Our transportation
+        </h2>
 
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 border-b border-gray-200 pb-4 mb-10">
           {navItems.map((item, index) => (
@@ -105,8 +110,7 @@ export default function TransportationSection() {
           ))}
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-start">
-          {/* Text Content */}
+        {/* <div className="grid md:grid-cols-2 gap-12 items-start max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div>
             <p className="text-gray-500 mb-6">{activeContent.description}</p>
 
@@ -127,7 +131,6 @@ export default function TransportationSection() {
             </button>
           </div>
 
-          {/* Image Section */}
           <div>
             <Image
               src={activeContent.image}
@@ -136,6 +139,42 @@ export default function TransportationSection() {
               height={400}
               className="rounded shadow-md object-fill h-[300px] w-[450px]"
             />
+          </div>
+        </div> */}
+
+        <div className="w-full sm:max-w-2xl md:max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-12 items-start">
+            {/* Text Content */}
+            <div>
+              <p className="text-gray-500 mb-6">{activeContent.description}</p>
+
+              <ul className="space-y-4 text-sm text-black font-medium">
+                {activeContent.points.map((point, idx) => (
+                  <li key={idx} className="flex items-start gap-2">
+                    <span className="text-orange-500 mt-1">◆</span>
+                    {point}
+                  </li>
+                ))}
+              </ul>
+
+              <button
+                onClick={handleViewDetails}
+                className="mt-8 bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded flex items-center gap-2"
+              >
+                View details <span>→</span>
+              </button>
+            </div>
+
+            {/* Image Section */}
+            <div>
+              <Image
+                src={activeContent.image}
+                alt="Transportation"
+                width={600}
+                height={400}
+                className="rounded shadow-md object-fill h-[200px] sm:h-[300px] w-full sm:w-[450px]"
+              />
+            </div>
           </div>
         </div>
       </section>
