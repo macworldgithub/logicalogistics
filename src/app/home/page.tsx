@@ -16,7 +16,7 @@ const Home = () => {
       <QuoteBanner/>
       <PageWrapper>
       <div className="relative z-10">
-        <CompanyStats />
+        {/* <CompanyStats /> */}
         <TransportationSection />
         <SolutionsSection />
         <ProcessSection/>

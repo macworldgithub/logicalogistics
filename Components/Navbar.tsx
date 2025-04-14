@@ -60,35 +60,30 @@ const Navbar = () => {
             { title: "InterState", href: "/inter" },
           ],
         },
-        { title: "LCL Freight Movement",
-           href: "/freight",
-          subItems: [
-            { title: "Steel", href: "/steel" },
-          ],
-
-         },
+        {
+          title: "LCL Freight Movement",
+          href: "/freight",
+          subItems: [{ title: "Steel", href: "/steel" }],
+        },
       ],
     },
     {
       title: "Warehouse & Distribution",
       subItems: [
-        { title: "Bio Security", 
+        {
+          title: "Bio Security",
           href: "/bio",
-          
+
           subItems: [
             { title: "Inspections", href: "/inspection" },
             { title: "Fumigation", href: "/fumigation" },
             { title: "Dairy & Fish Export Permit", href: "/fish" },
           ],
-
-
-         },
-        { title: "Inventory Management", 
-          href: "/management" ,
-          subItems: [
-            { title: "It Solutions", href: "/solution" },
-           
-          ],
+        },
+        {
+          title: "Inventory Management",
+          href: "/management",
+          subItems: [{ title: "It Solutions", href: "/solution" }],
         },
 
         { title: "Cross Docking", href: "/docking" },
@@ -104,25 +99,37 @@ const Navbar = () => {
   ];
 
   const handleMenuClick = (index: number) => {
-    setOpenMenuIndex(prev => (prev === index ? null : index));
+    setOpenMenuIndex((prev) => (prev === index ? null : index));
   };
 
   return (
     <>
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${navClasses}`}>
+      <nav
+        className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${navClasses}`}
+      >
         <div className="relative max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/home" className="flex items-center gap-2">
-              <Image src="/logo.png" alt="Logo" width={40} height={40} />
+              <Image src="/logo.png" alt="Logo" width={64} height={64} />
               <span className="font-bold text-xl text-white md:text-gray-900"></span>
             </Link>
           </div>
 
           {/* Nav Menu */}
           <div className="absolute left-1/2 transform -translate-x-1/2 hidden md:flex items-center space-x-8 text-sm font-medium">
-            <Link href="/home" className="hover:text-blue-300 whitespace-nowrap">Home</Link>
-            <Link href="/aboutus" className="hover:text-blue-300 whitespace-nowrap">About</Link>
+            <Link
+              href="/home"
+              className="hover:text-blue-300 whitespace-nowrap"
+            >
+              Home
+            </Link>
+            <Link
+              href="/aboutus"
+              className="hover:text-blue-300 whitespace-nowrap"
+            >
+              About
+            </Link>
 
             {menuItems.map((menu, index) => (
               <div className="relative nav-menu-item" key={index}>
@@ -142,7 +149,9 @@ const Navbar = () => {
                           className="flex justify-between items-center px-4 py-2 hover:bg-gray-100 whitespace-nowrap"
                         >
                           {item.title}
-                          {item.subItems && <FaChevronRight className="text-xs ml-2" />}
+                          {item.subItems && (
+                            <FaChevronRight className="text-xs ml-2" />
+                          )}
                         </Link>
                         {item.subItems && openMenuIndex === index && (
                           <div className="absolute left-full top-0 bg-white shadow-lg rounded w-56 py-2 hidden group-hover:block">
@@ -165,7 +174,12 @@ const Navbar = () => {
             ))}
 
             {/* <Link href="/services" className="hover:text-blue-300 whitespace-nowrap">Service</Link> */}
-            <Link href="/Contact" className="hover:text-blue-300 whitespace-nowrap">Contact</Link>
+            <Link
+              href="/Contact"
+              className="hover:text-blue-300 whitespace-nowrap"
+            >
+              Contact
+            </Link>
             {/* <Link href="/blog" className="hover:text-blue-300 whitespace-nowrap">Blog</Link> */}
           </div>
 
@@ -182,8 +196,18 @@ const Navbar = () => {
           {/* Mobile Hamburger */}
           <div className="md:hidden">
             <button onClick={() => setIsDrawerOpen(true)}>
-              <svg className="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              <svg
+                className="w-6 h-6 text-black"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
               </svg>
             </button>
           </div>
@@ -199,18 +223,48 @@ const Navbar = () => {
         <div className="p-4 flex justify-between items-center border-b">
           <span className="text-lg font-bold">Menu</span>
           <button onClick={() => setIsDrawerOpen(false)}>
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
             </svg>
           </button>
         </div>
         <ul className="p-4 space-y-4">
-          <li><Link href="/home" onClick={() => setIsDrawerOpen(false)}>Home</Link></li>
-          <li><Link href="/aboutus" onClick={() => setIsDrawerOpen(false)}>About us</Link></li>
-          <li><Link href="/page1" onClick={() => setIsDrawerOpen(false)}>Page 1</Link></li>
-          <li><Link href="/page2" onClick={() => setIsDrawerOpen(false)}>Page 2</Link></li>
+          <li>
+            <Link href="/home" onClick={() => setIsDrawerOpen(false)}>
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link href="/aboutus" onClick={() => setIsDrawerOpen(false)}>
+              About us
+            </Link>
+          </li>
+          <li>
+            <Link href="/page1" onClick={() => setIsDrawerOpen(false)}>
+              Page 1
+            </Link>
+          </li>
+          <li>
+            <Link href="/page2" onClick={() => setIsDrawerOpen(false)}>
+              Page 2
+            </Link>
+          </li>
           {/* <li><Link href="/services" onClick={() => setIsDrawerOpen(false)}>Service</Link></li> */}
-          <li><Link href="/Contact" onClick={() => setIsDrawerOpen(false)}>Contact</Link></li>
+          <li>
+            <Link href="/Contact" onClick={() => setIsDrawerOpen(false)}>
+              Contact
+            </Link>
+          </li>
           {/* <li><Link href="/blog" onClick={() => setIsDrawerOpen(false)}>Blog</Link></li> */}
           <li>
             <Link

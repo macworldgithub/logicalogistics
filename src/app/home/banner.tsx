@@ -19,16 +19,16 @@ const QuoteBanner = () => {
         {/* Left Side - Text */}
         <div className="text-white max-w-xl w-full space-y-4 gap-28">
           <div className="w-6 h-1 bg-orange-500"></div>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-snug">
+          <h1 className="text-3xl sm:text-4xl text-white lg:text-5xl font-bold leading-snug">
             Provide our customers <br />
             <span className="text-white">with a competitive edge</span>
           </h1>
           <p className="text-sm sm:text-base">
             Enhance business efficiency for clients with the best services.
           </p>
-          <button className="bg-orange-500 hover:bg-orange-600 text-white px-5 py-2 text-sm sm:text-base rounded-md shadow-md">
+          {/* <button className="bg-orange-500 hover:bg-orange-600 text-white px-5 py-2 text-sm sm:text-base rounded-md shadow-md">
             See services
-          </button>
+          </button> */}
         </div>
 
         {/* Right Side - Form */}
