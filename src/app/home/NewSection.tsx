@@ -43,9 +43,9 @@ const NewsSection: React.FC = () => {
             <p className="text-gray-600 text-sm">
               Provide you news updates to help you handle logistics challenges as well as crucial information about transportation for businesses
             </p>
-            <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-md">
+            {/* <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-md">
               See more
-            </button>
+            </button> */}
           </div>
 
           {/* Cards Section */}

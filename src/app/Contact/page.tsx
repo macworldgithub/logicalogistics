@@ -27,11 +27,13 @@ export default function Contact() {
       </div>
 
       {/* Contact Section */}
-      <div className="flex flex-col md:flex-row justify-center gap-32 items-start py-16 px-4 bg-white">
+      <div className="flex flex-col md:flex-row justify-center gap-32 items-start py-16 px-4 bg-white text-black">
         {/* Left side: Contact Info */}
         <div className="flex-1 max-w-lg">
-          <h2 className="text-2xl font-bold mb-4">Get in touch with us</h2>
-          <p className="mb-10 text-sm">
+          <h2 className="text-2xl font-bold mb-4 text-black">
+            Get in touch with us
+          </h2>
+          <p className="mb-10 text-sm text-black">
             Contact us on direct, by phone or fill out the form to receive a
             free consultation from our enthusiastic staff.
           </p>
@@ -40,24 +42,24 @@ export default function Contact() {
             <div className="flex items-start gap-4">
               <Phone className="text-orange-500 w-5 h-5 mt-1" />
               <div>
-                <p className="text-sm font-medium">Phone number</p>
-                <p className="text-base font-extrabold">+61 03 9452 8045</p>
+                <p className="text-sm font-medium text-black">Phone number</p>
+                <p className="text-base font-extrabold text-black">+61 03 9452 8045</p>
               </div>
             </div>
 
             <div className="flex items-start gap-4">
               <Mail className="text-orange-500 w-5 h-5 mt-1" />
               <div>
-                <p className="text-sm font-medium">Email</p>
-                <p className="text-sm">info@ozshipping.com.au</p>
+                <p className="text-sm font-medium text-black">Email</p>
+                <p className="text-sm text-black">info@ozshipping.com.au</p>
               </div>
             </div>
 
             <div className="flex items-start gap-4">
               <MapPin className="text-orange-500 w-5 h-5 mt-1" />
               <div>
-                <p className="text-sm font-medium">Address</p>
-                <p className="font-bold text-sm leading-6">
+                <p className="text-sm font-medium text-black">Address</p>
+                <p className="font-bold text-sm leading-6 text-black">
                   454A NorthRoad Road,
                   <br />
                   Huntingdale, Australia,
