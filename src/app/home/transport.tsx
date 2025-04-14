@@ -9,14 +9,15 @@ const navItems = [
     label: "Wharf Cartage",
     icon: "/Vector.png",
     content: {
-      description: "Transportation is offered from home to abroad and vice versa for clients.",
+      description:
+        "Transportation is offered from home to abroad and vice versa for clients.",
       points: [
         "Standard operating procedures for vehicle maintenance",
         "Journey management plan",
-        "Standard operating procedures for loading"
+        "Standard operating procedures for loading",
       ],
-      image: "/vehical.png"
-    }
+      image: "/vehical.png",
+    },
   },
   {
     label: "Container Movement",
@@ -26,37 +27,39 @@ const navItems = [
       points: [
         "Real-time container tracking",
         "Secure port-to-port handling",
-        "Optimized scheduling system"
+        "Optimized scheduling system",
       ],
-      image: "/movement.png"
-    }
+      image: "/movement.png",
+    },
   },
   {
     label: "LCL Freight Movement",
     icon: "/lcl.png",
     content: {
-      description: "Flexible LCL freight solutions for cost-effective delivery.",
+      description:
+        "Flexible LCL freight solutions for cost-effective delivery.",
       points: [
         "Shared cargo load options",
         "Safe storage and handling",
-        "Extensive logistics network"
+        "Extensive logistics network",
       ],
-      image: "/freight22.png"
-    }
+      image: "/freight22.png",
+    },
   },
   {
     label: "Freight Movement",
     icon: "/bus.png",
     content: {
-      description: "Transportation is offered from home to abroad and vice versa for clients.",
+      description:
+        "Transportation is offered from home to abroad and vice versa for clients.",
       points: [
         "Standard operating procedures for vehicle maintenance",
         "Journey management plan",
-        "Standard operating procedures for loading"
+        "Standard operating procedures for loading",
       ],
-      image: "/vehical.png"
-    }
-  }
+      image: "/vehical.png",
+    },
+  },
 ];
 
 export default function TransportationSection() {
@@ -86,7 +89,9 @@ export default function TransportationSection() {
   return (
     <ContentWrapper>
       <section className="bg-white  px-6 md:px-20 ">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12">Our transportation</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-12">
+          Our transportation
+        </h2>
 
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 border-b border-gray-200 pb-4 mb-10">
           {navItems.map((item, index) => (
