@@ -57,7 +57,7 @@ const navItems = [
         "Journey management plan",
         "Standard operating procedures for loading",
       ],
-      image: "/vehical.png",
+      image: "/cargo.png",
     },
   },
 ];
@@ -110,8 +110,7 @@ export default function TransportationSection() {
           ))}
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-start">
-          {/* Text Content */}
+        {/* <div className="grid md:grid-cols-2 gap-12 items-start max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div>
             <p className="text-gray-500 mb-6">{activeContent.description}</p>
 
@@ -132,7 +131,6 @@ export default function TransportationSection() {
             </button>
           </div>
 
-          {/* Image Section */}
           <div>
             <Image
               src={activeContent.image}
@@ -141,6 +139,42 @@ export default function TransportationSection() {
               height={400}
               className="rounded shadow-md object-fill h-[300px] w-[450px]"
             />
+          </div>
+        </div> */}
+
+        <div className="w-full sm:max-w-2xl md:max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-12 items-start">
+            {/* Text Content */}
+            <div>
+              <p className="text-gray-500 mb-6">{activeContent.description}</p>
+
+              <ul className="space-y-4 text-sm text-black font-medium">
+                {activeContent.points.map((point, idx) => (
+                  <li key={idx} className="flex items-start gap-2">
+                    <span className="text-orange-500 mt-1">◆</span>
+                    {point}
+                  </li>
+                ))}
+              </ul>
+
+              <button
+                onClick={handleViewDetails}
+                className="mt-8 bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded flex items-center gap-2"
+              >
+                View details <span>→</span>
+              </button>
+            </div>
+
+            {/* Image Section */}
+            <div>
+              <Image
+                src={activeContent.image}
+                alt="Transportation"
+                width={600}
+                height={400}
+                className="rounded shadow-md object-fill h-[200px] sm:h-[300px] w-full sm:w-[450px]"
+              />
+            </div>
           </div>
         </div>
       </section>
