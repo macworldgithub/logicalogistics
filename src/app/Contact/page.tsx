@@ -5,16 +5,19 @@ import Navbar from "../../../Components/Navbar";
 // import cartage from "../assets/cartage.png";
 // import SidebarServices from "../../../common/services";
 import PageHeader from "../../../common/PageHeader";
+import PageWrapper from "../../../utils/PageWrapper";
 // import PageWrapper from "../../../utils/PageWrapper";
 
 export default function Contact() {
   return (
+    <PageWrapper>
     <div className="flex flex-col min-h-screen font-poppins">
       <Navbar />
 
       {/* Hero Section */}
-      <PageHeader title="Contact Us" breadcrumb="Contact Us" />
-
+      <div>
+      <PageHeader title="Contact Us" breadcrumb="Contact Us " />
+      </div>
       {/* Contact Section */}
       <div className="flex flex-col md:flex-row justify-center gap-32 items-start py-16 px-4 bg-white text-black">
         {/* Left side: Contact Info */}
@@ -110,5 +113,6 @@ export default function Contact() {
         ></iframe>
       </div>
     </div>
+    </PageWrapper>
   );
 }
