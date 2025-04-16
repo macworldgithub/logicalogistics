@@ -31,8 +31,8 @@ const QuoteBanner = () => {
   // Slideshow logic
   const images = [
     "/home/BANNER.svg",
-    "/home/banner2.jpeg",
-    "/home/banner3.jpeg",
+    "/home/banner2.png",
+    "/home/banner3.png"
   ];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -42,7 +42,7 @@ const QuoteBanner = () => {
     }, 3000); // Change image every 1 seconds
 
     return () => clearInterval(interval);
-  }, []);
+  }, [images.length]);
 
   return (
     <section className="relative w-full h-[85vh] overflow-hidden">
@@ -64,11 +64,11 @@ const QuoteBanner = () => {
         <div className="text-white max-w-xl w-full space-y-4 gap-28">
           <div className="w-6 h-1 bg-orange-500"></div>
           <h1 className="text-3xl sm:text-4xl text-white lg:text-5xl font-bold leading-snug">
-            Provide our customers <br />
+            Providing our customers <br />
             <span className="text-white">with a competitive edge</span>
           </h1>
           <p className="text-sm sm:text-base">
-            Enhance business efficiency for clients with the best services.
+            Enhanced business efficiency for clients with the best services.
           </p>
         </div>
 

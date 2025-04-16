@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import Navbar from "../../../Components/Navbar";
-// import Footer from "../../../Components/Footer";
 import cartage from "../assets/cartage.png";
 import { FaShieldAlt, FaClock, FaLock, FaArrowRight } from "react-icons/fa";
 import PageWrapper from "../../../utils/PageWrapper";
@@ -11,7 +10,7 @@ const QuotePage = () => {
     <PageWrapper>
       <div className="w-full overflow-hidden bg-white text-gray-800 font-sans">
         <Navbar />
-      <PageHeader title="Contact Us" breadcrumb="Contact Us " />
+      <PageHeader title="Get a quote" breadcrumb="Get a quote" />
         
         {/* Hero Image */}
         <div className="relative w-full h-[400px]">
