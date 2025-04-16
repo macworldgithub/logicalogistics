@@ -1,15 +1,13 @@
 import React from "react";
 import Image from "next/image";
-import ContentWrapper from "../utils/ContentWrapper";
 
 interface BannerProps {
   title: string;
   breadcrumb: string;
 }
 const PageHeader = ({ title, breadcrumb }: BannerProps) => {
-  return (
-   <ContentWrapper>
-    <div className="w-[100%] h-[20vw] relative  ">
+  return (  
+    <div className="w-[99vw] h-[20vw] relative -ml-9">
       <Image
         src="/home/BANNER.svg"
         alt={`${title} Banner`}
@@ -21,10 +19,10 @@ const PageHeader = ({ title, breadcrumb }: BannerProps) => {
         <p className="text-white text-sm mt-2">Home &gt; {breadcrumb}</p>
       </div>
     </div>
-    </ContentWrapper>
   );
 };
 
 export default PageHeader;
+
 
 

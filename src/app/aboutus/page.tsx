@@ -8,7 +8,7 @@ const Aboutus = () => {
   return (
     <PageWrapper>
       <PageHeader title="About us" breadcrumb="About us" />
-      <div className='w-[99vw]'>
+      <div className=''>
         <div className='w-[80%] mx-auto lg:mt-6'>
         
           <GlobalError />
