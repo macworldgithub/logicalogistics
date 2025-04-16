@@ -1,31 +1,12 @@
 import React from "react";
-import Image from "next/image";
-import Navbar from "../../../Components/Navbar";
-import cartage from "../assets/cartage.png";
 import { FaShieldAlt, FaClock, FaLock, FaArrowRight } from "react-icons/fa";
 import PageWrapper from "../../../utils/PageWrapper";
 import PageHeader from "../../../common/PageHeader";
 const QuotePage = () => {
   return (
     <PageWrapper>
-      <div className="w-full overflow-hidden bg-white text-gray-800 font-sans">
-        <Navbar />
+     
       <PageHeader title="Get a quote" breadcrumb="Get a quote" />
-        
-        {/* Hero Image */}
-        <div className="relative w-full h-[400px]">
-          <Image
-            src={cartage}
-            alt="Cartage"
-            layout="fill"
-            objectFit="cover"
-            className="z-0"
-          />
-          <div className="absolute inset-0 bg-white bg-opacity-30 flex items-center justify-center">
-            <h1 className="text-4xl font-bold text-black">Get A Quote</h1>
-          </div>
-        </div>
-
         {/* Form Section */}
         <section className="max-w-6xl mx-auto px-4 py-16">
           <h2 className="text-2xl font-semibold mb-2">Fill out the form and we will get in touch</h2>
@@ -47,7 +28,7 @@ const QuotePage = () => {
           </div>
 
           {/* Form */}
-          <form className="bg-[#f9f9f9] p-8 rounded-lg shadow-md space-y-10">
+          <form className="bg-[#f9f9f9] p-8 rounded-lg shadow-md space-y-10 text-black">
             {/* Shipment Info */}
             <div>
               <h3 className="text-lg font-semibold mb-4">Shipment infor</h3>
@@ -141,8 +122,6 @@ const QuotePage = () => {
           </form>
         </section>
 
-        {/* <Footer /> */}
-      </div>
     </PageWrapper>
   );
 };
