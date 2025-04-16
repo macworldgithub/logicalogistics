@@ -42,7 +42,7 @@ const QuoteBanner = () => {
     }, 3000); // Change image every 1 seconds
 
     return () => clearInterval(interval);
-  }, []);
+  }, [images.length]);
 
   return (
     <section className="relative w-full h-[85vh] overflow-hidden">
