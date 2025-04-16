@@ -46,7 +46,7 @@ const QuoteBanner = () => {
     }
   };
 
-  const images = ["/home/BANNER.svg", "/home/banner2.png", "/home/banner3.png"];
+  const images = ["/home/BANNER.svg", "/home/banner3.svg", "/home/banner2.svg"];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
