@@ -6,12 +6,11 @@ interface BannerProps {
   breadcrumb: string;
 }
 const PageHeader = ({ title, breadcrumb }: BannerProps) => {
-  return (
-    <div className="w-[99vw] h-[20vw] relative -mt-4">
+  return (  
+    <div className="w-[99vw] h-[20vw] relative -ml-9">
       <Image
         src="/home/BANNER.svg"
-        alt="Banner"
-        // alt={${title} Banner}
+        alt={`${title} Banner`}
         fill
         className="object-cover"
       />
@@ -24,3 +23,6 @@ const PageHeader = ({ title, breadcrumb }: BannerProps) => {
 };
 
 export default PageHeader;
+
+
+

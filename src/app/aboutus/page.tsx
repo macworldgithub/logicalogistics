@@ -1,23 +1,17 @@
-'use client';
-
 import React from 'react';
 import PageWrapper from '../../../utils/PageWrapper';
 import GlobalError from './global';
-//import AboutCompany from './company_stats';
 import SpecialFeatures from './special_features';
 import StaticImage from './static_Image';
 import PageHeader from "./../../../common/PageHeader";
-
-
 const Aboutus = () => {
   return (
     <PageWrapper>
       <PageHeader title="About us" breadcrumb="About us" />
-      <div className='w-[99vw]'>
+      <div className=''>
         <div className='w-[80%] mx-auto lg:mt-6'>
         
           <GlobalError />
-          {/* <AboutCompany /> */}
           <SpecialFeatures />
 
           {/* Reusable StaticImage component use kiya */}
@@ -26,7 +20,8 @@ const Aboutus = () => {
 
         </div>
       </div>
-    </PageWrapper>
+     
+     </PageWrapper>
   );
 };
 

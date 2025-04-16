@@ -17,18 +17,35 @@ const QuoteBanner = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     const { name, email, phone } = formData;
     if (name && email && phone) {
-      router.push("/quotepage"); // Change this to your desired page
+      try {
+        const response = await fetch("/api/GetAQuote", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+          alert("Quote submitted successfully!");
+          router.push("/quotepage");
+        } else {
+          alert(data.message || "Failed to submit quote.");
+        }
+      } catch (error) {
+        console.error("Submission error:", error);
+        alert("Something went wrong. Please try again.");
+      }
     } else {
       alert("Please fill in all fields.");
     }
   };
 
-  // Slideshow logic
   const images = ["/home/BANNER.svg", "/home/banner2.png", "/home/banner3.png"];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
