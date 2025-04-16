@@ -111,7 +111,14 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/home" className="flex items-center gap-2">
-              <Image src="/logo.png" alt="Logo" width={100} height={100} />
+              <Image
+                src="/logo.png"
+                alt="Logo"
+                width={100}
+                height={100}
+               className="w-16 sm:w-20 md:w-24 lg:w-28 h-auto"
+              />
+
               <span className="font-bold text-xl text-white md:text-gray-900"></span>
             </Link>
           </div>
