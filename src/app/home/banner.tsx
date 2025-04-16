@@ -59,19 +59,25 @@ const QuoteBanner = () => {
 
   return (
     <section className="relative w-full min-h-screen sm:min-h-[85vh] overflow-hidden">
-      {/* Background Image Swapper */}
-      {images.map((img, index) => (
-        <Image
-          key={index}
-          src={img}
-          alt={`Banner ${index}`}
-          fill
-          className={`absolute top-0 left-0 object-cover object-center transition-opacity duration-1000 ease-in-out ${
-            index === currentImageIndex ? "opacity-100 z-10" : "opacity-0 z-0"
-          }`}
-          priority={index === 0}
-        />
-      ))}
+      <div className="absolute top-0 left-0 w-full h-full">
+        {images.map((img, index) => (
+          <Image
+            key={index}
+            src={img}
+            alt={`Banner ${index}`}
+            layout="fill"
+            objectFit="cover"
+            objectPosition="center"
+            priority={index === 0}
+            loading={index === 0 ? "eager" : "lazy"} // Load only first eagerly
+            placeholder="blur"
+            blurDataURL="/placeholder.png" // Replace with actual low-res base64 or static blur image
+            className={`absolute top-0 left-0 transition-opacity duration-1000 ease-in-out ${
+              index === currentImageIndex ? "opacity-100 z-10" : "opacity-0 z-0"
+            }`}
+          />
+        ))}
+      </div>
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/40 z-10"></div>
