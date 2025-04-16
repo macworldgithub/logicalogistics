@@ -272,11 +272,11 @@ const Navbar = () => {
               Contact
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link href="/quotepage" onClick={() => setIsDrawerOpen(false)}>
             Get A Quote
             </Link>
-          </li>
+          </li> */}
           {/* <li><Link href="/blog" onClick={() => setIsDrawerOpen(false)}>Blog</Link></li> */}
           <li>
             <Link
