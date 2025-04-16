@@ -257,19 +257,24 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link href="/page1" onClick={() => setIsDrawerOpen(false)}>
-              Page 1
+            <Link href="/cartage" onClick={() => setIsDrawerOpen(false)}>
+              Transportation
             </Link>
           </li>
           <li>
-            <Link href="/page2" onClick={() => setIsDrawerOpen(false)}>
-              Page 2
+            <Link href="/inspection" onClick={() => setIsDrawerOpen(false)}>
+              Warehouse & Distribution
             </Link>
           </li>
           {/* <li><Link href="/services" onClick={() => setIsDrawerOpen(false)}>Service</Link></li> */}
           <li>
             <Link href="/Contact" onClick={() => setIsDrawerOpen(false)}>
               Contact
+            </Link>
+          </li>
+          <li>
+            <Link href="/quotepage" onClick={() => setIsDrawerOpen(false)}>
+            Get A Quote
             </Link>
           </li>
           {/* <li><Link href="/blog" onClick={() => setIsDrawerOpen(false)}>Blog</Link></li> */}
