@@ -36,8 +36,9 @@ const QuotePage = () => {
       setFormData(prev => ({ ...prev, [name]: value }));
     }
 
-    // Clear error on change
+   
     setFormErrors(prev => prev.filter(error => error !== name));
+
   };
 
   const validateForm = () => {
