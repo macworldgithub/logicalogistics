@@ -28,7 +28,7 @@ const Movement = () => {
 
         <div className="w-full flex justify-center mb-10">
           <Image
-            src="/ship3.png"
+            src="/ship3.webp"
             alt="Wharf Cartage"
             width={750}
             height={538}
@@ -69,14 +69,14 @@ const Movement = () => {
 
           <div className="flex flex-col gap-4">
             <Image
-              src="/truck.png"
+              src="/truck.webp"
               alt="Fleet Trucks"
               width={400}
               height={280}
               className="w-full h-full object-cover "
             />
             <Image
-              src="/cargo.png"
+              src="/cargo.webp"
               alt="Container Loader"
               width={400}
               height={280}

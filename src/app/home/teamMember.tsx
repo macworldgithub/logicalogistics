@@ -17,23 +17,23 @@ const team: TeamMember[] = [
   {
     name: "Bessie Cooper",
     title: "Warehouse manager",
-    image: "/WarehouseManager.png",
+    image: "/WarehouseManager.webp",
   },
   {
     name: "Ralph Edwards",
     title: "Truck driver",
-    image: "/TruckDriver.png",
+    image: "/TruckDriver.webp",
     highlight: true,
   },
   {
     name: "Brooklyn Simmons",
     title: "Procurement manager",
-    image: "/ProcurementManager.png",
+    image: "/ProcurementManager.webp",
   },
   {
     name: "Theresa Webb",
     title: "Demand analyst",
-    image: "/DemandAnalyst.png",
+    image: "/DemandAnalyst.webp",
   },
 ];
 

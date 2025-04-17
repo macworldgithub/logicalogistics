@@ -58,7 +58,7 @@ const Lcl = () => {
           including versions of Lorem Ipsum
         </p>
         <Image
-          src="/container.png"
+          src="/container.webp"
           alt="Wharf Cartage"
           width={750}
           height={538}

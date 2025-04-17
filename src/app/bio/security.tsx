@@ -34,7 +34,7 @@ const Security = () => {
 
         <div className="w-full flex justify-center mb-10">
           <Image
-            src="/scan.png"
+            src="/scan.webp"
             alt="Wharf Cartage"
             width={750}
             height={538}
@@ -61,7 +61,7 @@ const Security = () => {
         </p>
 
         <Image
-          src="/work.png"
+          src="/work.webp"
           alt="Wharf Cartage"
           width={750}
           height={538}
@@ -87,7 +87,7 @@ const Security = () => {
         </p>
 
         <Image
-          src="/total.png"
+          src="/total.webp"
           alt="Wharf Cartage"
           width={750}
           height={538}

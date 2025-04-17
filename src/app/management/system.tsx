@@ -38,7 +38,7 @@ const System = () => {
 
           <div className="w-full flex justify-center mb-10">
             <Image
-              src="/set.png"
+              src="/set.webp"
               alt="Wharf Cartage"
               width={750}
               height={538}

@@ -16,7 +16,7 @@ const navItems = [
         "Journey management plan",
         "Standard operating procedures for loading",
       ],
-      image: "/vehical.png",
+      image: "/vehical.webp",
     },
   },
   {
@@ -29,7 +29,7 @@ const navItems = [
         "Secure port-to-port handling",
         "Optimized scheduling system",
       ],
-      image: "/movement.png",
+      image: "/movement.webp",
     },
   },
   {
@@ -43,7 +43,7 @@ const navItems = [
         "Safe storage and handling",
         "Extensive logistics network",
       ],
-      image: "/freight22.png",
+      image: "/freight22.webp",
     },
   },
   {
@@ -57,7 +57,7 @@ const navItems = [
         "Journey management plan",
         "Standard operating procedures for loading",
       ],
-      image: "/cargo.png",
+      image: "/cargo.webp",
     },
   },
 ];

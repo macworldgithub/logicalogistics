@@ -85,14 +85,14 @@ const Sider = () => {
 
           <div className="flex flex-col gap-4">
             <Image
-              src="/truck.png"
+              src="/truck.webp"
               alt="Fleet Trucks"
               width={400}
               height={280}
               className="w-full h-full object-cover "
             />
             <Image
-              src="/cargo.png"
+              src="/cargo.webp"
               alt="Container Loader"
               width={400}
               height={280}
