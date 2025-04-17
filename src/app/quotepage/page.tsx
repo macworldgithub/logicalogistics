@@ -48,7 +48,7 @@ const QuotePage = () => {
       });
       const data = await response.json();
       setMessage(data.message || 'Submission successful!');
-    } catch (error) {
+    } catch  {
       setMessage('Something went wrong. Please try again.');
     }
   };
