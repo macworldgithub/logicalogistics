@@ -41,7 +41,7 @@ export default function SolutionsSection() {
               alt={item.title}
               width={400}
               height={300}
-              className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 w-[99vm]"
+              className=" h-full object-cover transition-transform duration-300 group-hover:scale-105 w-[99vm]"
             />
           </div>
         ))}
