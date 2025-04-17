@@ -59,7 +59,7 @@ const Movement = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
           <div>
             <Image
-              src="/ship1.png"
+              src="/ship.webp"
               alt="Container Ship at Port"
               width={800}
               height={600}

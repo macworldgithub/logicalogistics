@@ -49,7 +49,7 @@ const Docking = () => {
         </p>
 
         <Image
-          src="/heat.png"
+          src="/heat.webp"
           alt="Wharf Cartage"
           width={750}
           height={538}

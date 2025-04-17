@@ -9,7 +9,7 @@ const PageHeader = ({ title, breadcrumb }: BannerProps) => {
   return (  
     <div className="w-[99vw] h-[20vw] relative -ml-9">
       <Image
-        src="/home/BANNER.svg"
+        src="/home/BANNER.webp"
         alt={`${title} Banner`}
         fill
         className="object-cover"

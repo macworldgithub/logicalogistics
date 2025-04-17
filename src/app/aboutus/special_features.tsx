@@ -3,8 +3,7 @@
 import Image from "next/image";
 
 interface Feature {
-
-  icon: JSX.Element;
+  icon: string;
   title: string;
   description: string;
 }
