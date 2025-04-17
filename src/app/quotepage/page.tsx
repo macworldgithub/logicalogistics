@@ -5,15 +5,28 @@ import { FaShieldAlt, FaClock, FaLock, FaArrowRight } from "react-icons/fa";
 import PageWrapper from "../../../utils/PageWrapper";
 import PageHeader from "../../../common/PageHeader";
 
+type QuoteFormData = {
+  origin: string;
+  destination: string;
+  commodity: string;
+  serviceType: string;
+  package: string;
+  dimensions: string;
+  options: string[];
+  name: string;
+  email: string;
+  phone: string;
+};
+
 const QuotePage = () => {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<QuoteFormData>({
     origin: '',
     destination: '',
     commodity: '',
     serviceType: '',
     package: '',
     dimensions: '',
-    options: [] as string[],
+    options: [],
     name: '',
     email: '',
     phone: ''
@@ -23,11 +36,10 @@ const QuotePage = () => {
   const [message, setMessage] = useState('');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-    const target = e.target as HTMLInputElement | HTMLSelectElement;
-    const { name, value } = target;
+    const { name, value, type } = e.target;
 
-    if (target.type === 'checkbox') {
-      const checked = (target as HTMLInputElement).checked;
+    if (type === 'checkbox') {
+      const checked = (e.target as HTMLInputElement).checked;
       setFormData(prev => ({
         ...prev,
         options: checked ? [value] : []
@@ -36,16 +48,14 @@ const QuotePage = () => {
       setFormData(prev => ({ ...prev, [name]: value }));
     }
 
-   
     setFormErrors(prev => prev.filter(error => error !== name));
-
   };
 
   const validateForm = () => {
     const errors: string[] = [];
 
     for (const field in formData) {
-      const value = (formData as any)[field];
+      const value = formData[field as keyof QuoteFormData];
       if ((Array.isArray(value) && value.length === 0) || (!Array.isArray(value) && !value)) {
         errors.push(field);
       }
@@ -118,7 +128,7 @@ const QuotePage = () => {
                   <label className="mb-1 text-sm">{label}</label>
                   <select
                     name={name}
-                    value={(formData as any)[name]}
+                    value={formData[name as keyof QuoteFormData] as string}
                     onChange={handleChange}
                     className={`border p-2 rounded bg-white text-sm ${hasError(name) ? 'border-red-500' : ''}`}
                   >
@@ -165,7 +175,7 @@ const QuotePage = () => {
                   key={name}
                   type={type}
                   name={name}
-                  value={(formData as any)[name]}
+                  value={formData[name as keyof QuoteFormData] as string}
                   onChange={handleChange}
                   placeholder={placeholder}
                   className={`border p-2 rounded bg-white text-sm ${full ? 'md:col-span-2' : ''} ${hasError(name) ? 'border-red-500' : ''}`}
