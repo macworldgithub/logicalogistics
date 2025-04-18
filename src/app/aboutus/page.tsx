@@ -6,21 +6,19 @@ import StaticImage from './static_Image';
 import PageHeader from "./../../../common/PageHeader";
 const Aboutus = () => {
   return (
+    <>
     <PageWrapper>
       <PageHeader title="About us" breadcrumb="About us" />
-      
-        <div className='w-[80%] mx-auto lg:mt-6'>
+        <div className='w-[99vw] lg:mt-6'>
+          <div className='w-[70%] mx-auto'>
           <GlobalError />
           <SpecialFeatures />
-
-          {/* Reusable StaticImage component use kiya */}
-          <div className='w-[100%] '>
+          </div>
+          </div>
+          </PageWrapper>
           <StaticImage src="/section4.png" alt="Container Ship Image"  />
           <StaticImage src="/section5.png" alt="Another Section Image" />
-          </div>
-      </div>
-     </PageWrapper>
-    
+           </>
 
   );
 };

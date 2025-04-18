@@ -32,8 +32,8 @@ const NetworkMap: React.FC = () => {
   const [isTooltipActive, setIsTooltipActive] = useState(false);
 
   return (
-    <section className="w-full bg-white py-10 px-4">
-      <h2 className="text-2xl md:text-4xl font-semibold text-center mb-8">Our network</h2>
+    <section className="w-full bg-white ">
+      <h2 className="text-2xl md:text-4xl font-semibold text-center">Our network</h2>
 
       <div className="relative w-full max-w-5xl mx-auto aspect-[2/1]">
         <Image
