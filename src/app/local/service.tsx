@@ -34,7 +34,7 @@ const Service = () => {
 
           <div className="w-full flex justify-center mb-10">
             <Image
-              src="/truck.png"
+              src="/truck.webp"
               alt="Wharf Cartage"
               width={750}
               height={538}
@@ -59,7 +59,7 @@ const Service = () => {
             PageMaker including versions of Lorem Ipsum
           </p>
           <Image
-            src="/container.png"
+            src="/container.webp"
             alt="Wharf Cartage"
             width={750}
             height={538}

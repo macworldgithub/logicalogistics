@@ -11,7 +11,7 @@ export default function CommunityPage() {
           {/* Image */}
           <div className="w-full">
             <Image
-              src="/community.png"
+              src="/community.webp"
               alt="Team Leader"
               width={500}
               height={500}

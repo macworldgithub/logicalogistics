@@ -107,11 +107,18 @@ const Navbar = () => {
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${navClasses}`}
       >
-        <div className="relative max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+        <div className="relative max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/home" className="flex items-center gap-2">
-              <Image src="/logo.png" alt="Logo" width={100} height={100} />
+              <Image
+                src="/logo.png"
+                alt="Logo"
+                width={100}
+                height={100}
+               className="w-16 sm:w-20 md:w-24 lg:w-28 h-auto"
+              />
+
               <span className="font-bold text-xl text-white md:text-gray-900"></span>
             </Link>
           </div>
@@ -250,13 +257,13 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link href="/page1" onClick={() => setIsDrawerOpen(false)}>
-              Page 1
+            <Link href="/cartage" onClick={() => setIsDrawerOpen(false)}>
+              Transportation
             </Link>
           </li>
           <li>
-            <Link href="/page2" onClick={() => setIsDrawerOpen(false)}>
-              Page 2
+            <Link href="/inspection" onClick={() => setIsDrawerOpen(false)}>
+              Warehouse & Distribution
             </Link>
           </li>
           {/* <li><Link href="/services" onClick={() => setIsDrawerOpen(false)}>Service</Link></li> */}
@@ -265,6 +272,11 @@ const Navbar = () => {
               Contact
             </Link>
           </li>
+          {/* <li>
+            <Link href="/quotepage" onClick={() => setIsDrawerOpen(false)}>
+            Get A Quote
+            </Link>
+          </li> */}
           {/* <li><Link href="/blog" onClick={() => setIsDrawerOpen(false)}>Blog</Link></li> */}
           <li>
             <Link

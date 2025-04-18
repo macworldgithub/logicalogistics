@@ -16,7 +16,7 @@ const navItems = [
         "Journey management plan",
         "Standard operating procedures for loading",
       ],
-      image: "/vehical.png",
+      image: "/vehical.webp",
     },
   },
   {
@@ -29,7 +29,7 @@ const navItems = [
         "Secure port-to-port handling",
         "Optimized scheduling system",
       ],
-      image: "/movement.png",
+      image: "/movement.webp",
     },
   },
   {
@@ -43,7 +43,7 @@ const navItems = [
         "Safe storage and handling",
         "Extensive logistics network",
       ],
-      image: "/freight22.png",
+      image: "/freight22.webp",
     },
   },
   {
@@ -57,7 +57,7 @@ const navItems = [
         "Journey management plan",
         "Standard operating procedures for loading",
       ],
-      image: "/cargo.png",
+      image: "/cargo.webp",
     },
   },
 ];
@@ -88,7 +88,7 @@ export default function TransportationSection() {
 
   return (
     <ContentWrapper>
-      <section className="bg-white  px-6 md:px-20 ">
+      <section className="bg-white  px-6   md:px-20 w-[100%] ">
         <h2 className="text-3xl md:text-4xl font-bold mb-12">
           Our transportation
         </h2>
@@ -142,10 +142,10 @@ export default function TransportationSection() {
           </div>
         </div> */}
 
-        <div className="w-full sm:max-w-2xl md:max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-start">
             {/* Text Content */}
-            <div>
+            <div className="text-left">
               <p className="text-gray-500 mb-6">{activeContent.description}</p>
 
               <ul className="space-y-4 text-sm text-black font-medium">
@@ -166,13 +166,13 @@ export default function TransportationSection() {
             </div>
 
             {/* Image Section */}
-            <div>
+            <div className="flex justify-center md:justify-end">
               <Image
                 src={activeContent.image}
                 alt="Transportation"
                 width={600}
                 height={400}
-                className="rounded shadow-md object-fill h-[200px] sm:h-[300px] w-full sm:w-[450px]"
+                className="rounded shadow-md object-cover w-full h-auto max-w-[450px] sm:h-[300px]"
               />
             </div>
           </div>

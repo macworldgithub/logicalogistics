@@ -28,7 +28,7 @@ const Rates = () => {
 
         <div className="w-full flex justify-center mb-10">
           <Image
-            src="/check.png"
+            src="/check.webp"
             alt="Wharf Cartage"
             width={750}
             height={538}
