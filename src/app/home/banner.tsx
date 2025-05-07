@@ -62,7 +62,7 @@ const QuoteBanner = () => {
   }, [images.length]);
 
   return (
-    <section className="relative w-full min-h-screen sm:min-h-[85vh] overflow-hidden">
+    <section className="relative w-[100vw] min-h-screen sm:min-h-[85vh] overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-full">
         {images.map((img, index) => (
           <Image

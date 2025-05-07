@@ -7,7 +7,7 @@ interface BannerProps {
 }
 const PageHeader = ({ title, breadcrumb }: BannerProps) => {
   return (  
-    <div className="relative w-[99vw] h-[20vw] max-lg:h-[40vh] ">
+    <div className="relative w-[100vw] h-[20vw] max-lg:h-[40vh] ">
       <Image
         src="/home/BANNER.webp"
         alt={`${title} Banner`}
