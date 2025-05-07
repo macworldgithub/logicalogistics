@@ -90,7 +90,7 @@ export default function TransportationSection() {
     <ContentWrapper>
       <section className="bg-white  px-6   md:px-20 w-[100%] ">
         <h2 className="text-3xl md:text-4xl font-bold mb-12">
-          Our transportation
+          Effortless Movements
         </h2>
 
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 border-b border-gray-200 pb-4 mb-10">

@@ -10,7 +10,7 @@ const Navbar = () => {
   const pathname = usePathname();
   const [isAtTop, setIsAtTop] = useState(true);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-  const [openMenuIndex, setOpenMenuIndex] = useState<number | null>(null); // Update to allow null or index
+  const [openMenuIndex, setOpenMenuIndex] = useState<number | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,7 +25,7 @@ const Navbar = () => {
     const handleClickOutside = (e: MouseEvent) => {
       const target = e.target as HTMLElement | null;
       if (target && !target.closest(".nav-menu-item")) {
-        setOpenMenuIndex(null); // Reset open menu when clicking outside
+        setOpenMenuIndex(null);
       }
     };
 
@@ -73,7 +73,6 @@ const Navbar = () => {
         {
           title: "Bio Security",
           href: "/bio",
-
           subItems: [
             { title: "Inspections", href: "/inspection" },
             { title: "Fumigation", href: "/fumigation" },
@@ -85,7 +84,6 @@ const Navbar = () => {
           href: "/management",
           subItems: [{ title: "It Solutions", href: "/solution" }],
         },
-
         { title: "Cross Docking", href: "/docking" },
       ],
     },
@@ -116,9 +114,8 @@ const Navbar = () => {
                 alt="Logo"
                 width={100}
                 height={100}
-               className="w-16 sm:w-20 md:w-24 lg:w-28 h-auto"
+                className="w-16 sm:w-20 md:w-24 lg:w-28 h-auto"
               />
-
               <span className="font-bold text-xl text-white md:text-gray-900"></span>
             </Link>
           </div>
@@ -180,24 +177,25 @@ const Navbar = () => {
               </div>
             ))}
 
-            {/* <Link href="/services" className="hover:text-blue-300 whitespace-nowrap">Service</Link> */}
             <Link
               href="/Contact"
               className="hover:text-orange-400 whitespace-nowrap"
             >
               Contact
             </Link>
-            {/* <Link href="/blog" className="hover:text-blue-300 whitespace-nowrap">Blog</Link> */}
           </div>
 
           {/* CTA */}
           <div className="hidden md:block">
-            <Link
-              href="/quotepage"
+            <a
+              href="http://omnisuiteai.com/wp-content/uploads/2025/05/Logica-Logistics-Application-Form-1.pdf"
+              download
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-[#F26522] font-regular text-xs bg-[#FFF3EC] px-3 py-2 rounded transition duration-300 hover:bg-[#F26522] hover:text-white"
             >
               Get a quote
-            </Link>
+            </a>
           </div>
 
           {/* Mobile Hamburger */}
@@ -266,26 +264,22 @@ const Navbar = () => {
               Warehouse & Distribution
             </Link>
           </li>
-          {/* <li><Link href="/services" onClick={() => setIsDrawerOpen(false)}>Service</Link></li> */}
           <li>
             <Link href="/Contact" onClick={() => setIsDrawerOpen(false)}>
               Contact
             </Link>
           </li>
-          {/* <li>
-            <Link href="/quotepage" onClick={() => setIsDrawerOpen(false)}>
-            Get A Quote
-            </Link>
-          </li> */}
-          {/* <li><Link href="/blog" onClick={() => setIsDrawerOpen(false)}>Blog</Link></li> */}
           <li>
-            <Link
-              href="/quotepage"
+            <a
+              href="http://omnisuiteai.com/wp-content/uploads/2025/05/Logica-Logistics-Application-Form-1.pdf"
+              download
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setIsDrawerOpen(false)}
               className="block w-full text-center border border-orange-500 text-orange-500 px-4 py-1 rounded hover:bg-orange-500 hover:text-white"
             >
               Get a quote
-            </Link>
+            </a>
           </li>
         </ul>
       </div>
