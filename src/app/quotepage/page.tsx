@@ -130,16 +130,20 @@ const QuotePage = () => {
           {/* Toggle Headings */}
           <div className="flex justify-between items-start">
             <h3
-              className={`text-lg font-semibold mb-4 cursor-pointer ${
-                selectedTab === "shipment" ? "text-orange-500" : ""
+              className={`text-lg mb-4 cursor-pointer px-2 py-1 rounded transition ${
+                selectedTab === "shipment"
+                  ? "bg-orange-300 text-orange-500 font-semibold"
+                  : "hover:text-orange-500 hover:bg-orange-50"
               }`}
               onClick={() => setSelectedTab("shipment")}
             >
               Shipment Info
             </h3>
             <h3
-              className={`text-md mb-3 cursor-pointer ${
-                selectedTab === "warehouse" ? "text-orange-500" : ""
+              className={`text-md mb-3 cursor-pointer px-2 py-1 rounded transition ${
+                selectedTab === "warehouse"
+                  ? "font-bold text-orange-500 bg-orange-300"
+                  : "hover:text-orange-500 hover:font-bold hover:bg-orange-50"
               }`}
               onClick={() => setSelectedTab("warehouse")}
             >
