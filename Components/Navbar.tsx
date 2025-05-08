@@ -90,7 +90,11 @@ const Navbar = () => {
     {
       title: "Policies",
       subItems: [
-        { title: "Application Forms", href: "/communityPage" },
+        {
+          title: "Application Forms",
+          href: "http://omnisuiteai.com/wp-content/uploads/2025/05/Logica-Logistics-Application-Form-1.pdf",
+          isDownload: true,
+        },
         { title: "Terms & Conditions", href: "/conditions" },
       ],
     },
@@ -106,7 +110,6 @@ const Navbar = () => {
         className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${navClasses}`}
       >
         <div className="relative max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
-          {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/home" className="flex items-center gap-2">
               <Image
@@ -120,7 +123,6 @@ const Navbar = () => {
             </Link>
           </div>
 
-          {/* Nav Menu */}
           <div className="absolute left-1/2 transform -translate-x-1/2 hidden md:flex items-center space-x-8 text-sm font-medium">
             <Link
               href="/home"
@@ -147,16 +149,29 @@ const Navbar = () => {
                 {openMenuIndex === index && (
                   <div className="absolute bg-white text-gray-700 shadow-lg mt-2 rounded w-64 py-2 z-50">
                     {menu.subItems.map((item, idx) => (
+            
                       <div key={idx} className="group relative">
-                        <Link
-                          href={item.href}
-                          className="flex justify-between items-center px-4 py-2 hover:bg-[#f27929] hover:text-white whitespace-nowrap"
-                        >
-                          {item.title}
-                          {item.subItems && (
-                            <FaChevronRight className="text-xs ml-2" />
-                          )}
-                        </Link>
+                        {item.isDownload ? (
+                          <a
+                            href={item.href}
+                            download
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex justify-between items-center px-4 py-2 hover:bg-[#f27929] hover:text-white whitespace-nowrap"
+                          >
+                            {item.title}
+                          </a>
+                        ) : (
+                          <Link
+                            href={item.href}
+                            className="flex justify-between items-center px-4 py-2 hover:bg-[#f27929] hover:text-white whitespace-nowrap"
+                          >
+                            {item.title}
+                            {item.subItems && (
+                              <FaChevronRight className="text-xs ml-2" />
+                            )}
+                          </Link>
+                        )}
                         {item.subItems && openMenuIndex === index && (
                           <div className="absolute left-full top-0 bg-white shadow-lg rounded w-56 py-2 hidden group-hover:block">
                             {item.subItems.map((sub, i) => (
@@ -185,20 +200,15 @@ const Navbar = () => {
             </Link>
           </div>
 
-          {/* CTA */}
           <div className="hidden md:block">
-            <a
-              href="http://omnisuiteai.com/wp-content/uploads/2025/05/Logica-Logistics-Application-Form-1.pdf"
-              download
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/quotepage"
               className="text-[#F26522] font-regular text-xs bg-[#FFF3EC] px-3 py-2 rounded transition duration-300 hover:bg-[#F26522] hover:text-white"
             >
               Get a quote
-            </a>
+            </Link>
           </div>
 
-          {/* Mobile Hamburger */}
           <div className="md:hidden">
             <button onClick={() => setIsDrawerOpen(true)}>
               <svg
@@ -219,7 +229,6 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* Mobile Drawer */}
       <div
         className={`fixed top-0 left-0 w-64 h-full bg-white shadow-lg z-50 transform transition-transform duration-300 ${
           isDrawerOpen ? "translate-x-0" : "-translate-x-full"
@@ -270,21 +279,17 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <a
-              href="http://omnisuiteai.com/wp-content/uploads/2025/05/Logica-Logistics-Application-Form-1.pdf"
-              download
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/quotepage"
               onClick={() => setIsDrawerOpen(false)}
               className="block w-full text-center border border-orange-500 text-orange-500 px-4 py-1 rounded hover:bg-orange-500 hover:text-white"
             >
               Get a quote
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
 
-      {/* Overlay */}
       {isDrawerOpen && (
         <div
           className="fixed inset-0 bg-black opacity-50 z-40"

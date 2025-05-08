@@ -33,7 +33,12 @@ const QuoteBanner = () => {
 
         if (response.ok) {
           alert("Quote submitted successfully!");
-          router.push("/quotepage");
+          setFormData({
+            name: "",
+            email: "",
+            phone: "",
+          });
+          // router.push("/quotepage");
         } else {
           alert(data.message || "Failed to submit quote.");
         }
