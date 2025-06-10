@@ -18,10 +18,7 @@ const Sider = () => {
           Container Movement
         </h2>
         <p className="mb-4 text-gray-800 text-xs">
-          While offering a link in the international logistic solutions we also
-          can assist with all other container movement requirements. Be it out
-          of Melbourne’s wharfs or simply moving containers throughout the
-          country we can certainly assist.
+          While offering a link in international logistic solutions we also assist with all other container movement requirements, be it out of Melbourne’s wharfs or simply moving containers throughout the country. Our experienced team can find a solution to any challenge and will keep you informed every step of the journey. .
         </p>
 
         <div className="w-full flex justify-center mb-10">

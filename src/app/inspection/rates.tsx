@@ -17,14 +17,14 @@ const Rates = () => {
         <h2 className="text-2xl md:text-3xl font-bold mb-4 text-black text-center md:text-left">
           Inspections
         </h2>
-        <p className="mb-4 text-gray-800 text-xs">
-          <ul>
-            <li> Services Offered: </li>
-            <li> . Unpacking (Goods Inspection) </li>
-            <li>.Tailgate Inspection </li>
-            <li> .Deep Burial</li>
-          </ul>
-        </p>
+        <div className="mb-4 text-gray-800 text-xs">
+  <p className="font-semibold mb-2">Services Offered:</p>
+  <ul className="list-disc list-inside space-y-1">
+    <li>Unpacking (Goods Inspection)</li>
+    <li>Tailgate Inspection</li>
+    <li>Deep Burial</li>
+  </ul>
+</div>
 
         <div className="w-full flex justify-center mb-10">
           <Image

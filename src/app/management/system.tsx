@@ -20,20 +20,14 @@ const System = () => {
             Inventory Management
           </h2>
           <p className="mb-4 text-gray-800 text-xs">
-            At Logica we are constantly striving to achieve a seamless supply
-            chain for your goods, ensuring that you can entrust us with their
-            handling and transportation. When outsourcing third- or fourth-party
-            logistics we want to ensure you are being represented to the highest
-            level
+           At Logica we are constantly striving to achieve a seamless supply chain for your goods, ensuring that you can entrust us with their handling and transportation. When outsourcing third- or fourth-party logistics we want to ensure you are being represented to the highest level.
           </p>
           <p className="mb-4 text-gray-800 text-xs">
             We can assist with container unpacking/packing, goods can be
             received for storage or cross-docked for expedient delivery
           </p>
           <p className="mb-4 text-gray-800 text-xs">
-            Logica handles cartons through to steel pipe, our 3PL warehousing
-            aims to offer our clients a strategic advantage with our
-            cost-effective solutions and improved supply chain efficiencie
+           Logica handles a range of freight types, from single cartons through to industrial steel. Our 3PL warehousing offers our customers a strategic advantage with our cost-effective solutions and personal customer service.
           </p>
 
           <div className="w-full flex justify-center mb-10">

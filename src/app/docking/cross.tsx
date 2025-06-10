@@ -18,8 +18,10 @@ const Docking = () => {
           Cross Docking
         </h2>
         <p className="mb-4 text-gray-800 text-xs">
-          At Logica, we understand that speed and efficiency are critical in
-          today’s fast-paced logistics environment.
+         At Logica we can offer end to end services, with trailer capabilities such as tailgate rigids, semi and B-double tautliners (including mezzanine floor tautliners) and flat top trailer.
+         </p>
+        <p className="text-gray-800 text-xs"> 
+         Goods can be collected or delivered depending on the requirement. 
         </p>
 
         <div className="w-full flex justify-center mb-10">

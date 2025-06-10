@@ -24,15 +24,11 @@ export default function CommunityPage() {
             <h2 className="text-2xl md:text-4xl font-bold mb-4">
               Our Community/Team
             </h2>
-            <p className="text-sm text-gray-700 mb-3 leading-relaxed">
-              At Logica we are a collection of people who have worked together over the years for different companies and decided that we wanted to be able to implement the best of what we have learned over time. We have been brought together as a part of Rhys’s vision that the right people are the biggest asset a company can ever have...
+            <p className="text-sm text-gray-700 mb-4 leading-relaxed">
+              At Logica we are a collection of people who have worked together over the years for different companies and decided that we wanted to be able to implement the best of what we have learned over time.            
             </p>
-            <p className="text-sm text-gray-700 mb-3 leading-relaxed">
-              The greatest pleasure in our professional careers has been forming this team together, and through our loyalty to staff development Logica are creating a solution focused team with a common goal of “making Logistics simple”...
-            </p>
-            <p className="text-sm text-gray-700 leading-relaxed">
-              Reconnecting this team has been my greatest pleasure having worked with everyone over my professional career (
-              <a href="#" className="text-blue-600 underline">Logica CEO</a>).
+            <p className="text-sm text-gray-700 mb-8 leading-relaxed">
+              We have been brought together as a part of Rhys’ vision that the right people are the biggest asset a company can ever have.         
             </p>
           </div>
         </div>

@@ -18,18 +18,7 @@ const Security = () => {
           Bio Security
         </h2>
         <p className="mb-4 text-gray-800 text-xs">
-          At Logica, we take bio-security seriously, ensuring that your goods
-          meet the highest standards of safety and compliance. As a
-          government-accredited provider, we adhere to strict regulations and
-          protocols designed to protect against biological threats and prevent
-          the spread of pests and diseases. Our bio-security services include
-          thorough inspections, quarantine management, and precise
-          documentation, all handled by our highly trained and certified team.
-          Whether you’re importing or exporting, you can trust Logica to
-          safeguard your shipments and ensure they meet all necessary legal and
-          environmental requirements. With our commitment to excellence, we help
-          you navigate the complexities of bio-security, giving you peace of
-          mind and protecting public health.
+         Being an accredited 1.3 Bio-Security facility, we have implemented standards and protocols ensuring the highest standards are maintained. Logica also hold a Food Permit Licence, Allergens and Food Safety certificates to ensure your freight is handled with care within a clean environment. 
         </p>
 
         <div className="w-full flex justify-center mb-10">

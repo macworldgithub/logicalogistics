@@ -18,12 +18,11 @@ const Movement = () => {
           LCL Freight Movement
         </h2>
         <p className="mb-4 text-gray-800 text-xs">
-          At Logica we can offer end to end services, with trailer capabilities
-          such as tailgate rigids, semi and B-double tautliners (including
-          mezzanine floor tautliners) and flat top trailer. While currently
-          servicing the steel industry, and with our experienced operators we
-          are also capable of handling many of those challenging requirements
-          you may have.
+          At Logica we can offer end to end services, with trailer capabilities such as tailgate rigids, semi and B-double tautliners (including mezzanine floor tautliners) and flat top trailers.
+        </p>
+        <p className="mb-4 text-gray-800 text-xs">
+          We have extensive experience in servicing the steel industry and with our experienced operators we are also capable of handling many different requirements you may have, no matter how challenging.
+
         </p>
 
         <div className="w-full flex justify-center mb-10">
