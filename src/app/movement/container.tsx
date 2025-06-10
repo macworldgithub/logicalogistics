@@ -54,7 +54,7 @@ const Sider = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
           <div>
             <Image
-              src="/ship1.png"
+              src="/ship.webp"
               alt="Container Ship at Port"
               width={800}
               height={600}
@@ -64,14 +64,14 @@ const Sider = () => {
 
           <div className="flex flex-col gap-4">
             <Image
-              src="/truck.png"
+              src="/truck.webp"
               alt="Fleet Trucks"
               width={400}
               height={280}
               className="w-full h-full object-cover "
             />
             <Image
-              src="/cargo.png"
+              src="/cargo.webp"
               alt="Container Loader"
               width={400}
               height={280}

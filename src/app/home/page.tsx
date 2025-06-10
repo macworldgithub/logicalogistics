@@ -10,23 +10,33 @@ import TeamMembersSection from "./teamMember";
 import TransportationSection from "./transport";
 const Home = () => {
   return (
-    <div className="w-[99vw]">
+    <>
       <QuoteBanner />
       <PageWrapper>
-        <div className="relative z-10">
-          {/* <CompanyStats /> */}
+        <div className='w-[99vw] lg:mt-6'>
+        <div className='w-[70%] mx-auto'>
           <TransportationSection />
           <SolutionsSection />
           <ProcessSection />
+          </div>
+          </div>
+          </PageWrapper>
           <StaticImage src="/section12.png" alt="Container Ship Image" />
+        
           <TeamMembersSection />
+
           <StaticImage src="/SECTION 11.png" alt="Container Ship Image" />
+          <PageWrapper>
+          <div className='w-[99vw] lg:mt-6'>
+          <div className='w-[70%] mx-auto'>
           <ContactSection />
           <NewsSection />
-          <OurNetwork />
+          </div>
         </div>
-      </PageWrapper>
-    </div>
+        </PageWrapper>
+        <OurNetwork />
+    
+    </>
   );
 };
 export default Home;

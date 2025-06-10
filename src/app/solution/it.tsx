@@ -25,7 +25,7 @@ const Lcl = () => {
 
         <div className="w-full flex justify-center mb-10">
           <Image
-            src="/aeroplane.png"
+            src="/aeroplane.webp"
             alt="Wharf Cartage"
             width={750}
             height={538}

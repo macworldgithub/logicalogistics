@@ -10,7 +10,7 @@ const Navbar = () => {
   const pathname = usePathname();
   const [isAtTop, setIsAtTop] = useState(true);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-  const [openMenuIndex, setOpenMenuIndex] = useState<number | null>(null); // Update to allow null or index
+  const [openMenuIndex, setOpenMenuIndex] = useState<number | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,7 +25,7 @@ const Navbar = () => {
     const handleClickOutside = (e: MouseEvent) => {
       const target = e.target as HTMLElement | null;
       if (target && !target.closest(".nav-menu-item")) {
-        setOpenMenuIndex(null); // Reset open menu when clicking outside
+        setOpenMenuIndex(null);
       }
     };
 
@@ -73,7 +73,6 @@ const Navbar = () => {
         {
           title: "Bio Security",
           href: "/bio",
-
           subItems: [
             { title: "Inspections", href: "/inspection" },
             { title: "Fumigation", href: "/fumigation" },
@@ -85,14 +84,17 @@ const Navbar = () => {
           href: "/management",
           subItems: [{ title: "It Solutions", href: "/solution" }],
         },
-
         { title: "Cross Docking", href: "/docking" },
       ],
     },
     {
       title: "Policies",
       subItems: [
-        { title: "Application Forms", href: "/communityPage" },
+        {
+          title: "Application Forms",
+          href: "http://omnisuiteai.com/wp-content/uploads/2025/05/Logica-Logistics-Application-Form-1.pdf",
+          isDownload: true,
+        },
         { title: "Terms & Conditions", href: "/conditions" },
       ],
     },
@@ -107,16 +109,20 @@ const Navbar = () => {
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${navClasses}`}
       >
-        <div className="relative max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-          {/* Logo */}
+        <div className="relative max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
           <div className="flex-shrink-0">
             <Link href="/home" className="flex items-center gap-2">
-              <Image src="/logo.png" alt="Logo" width={100} height={100} />
+              <Image
+                src="/logo.png"
+                alt="Logo"
+                width={100}
+                height={100}
+                className="w-16 sm:w-20 md:w-24 lg:w-28 h-auto"
+              />
               <span className="font-bold text-xl text-white md:text-gray-900"></span>
             </Link>
           </div>
 
-          {/* Nav Menu */}
           <div className="absolute left-1/2 transform -translate-x-1/2 hidden md:flex items-center space-x-8 text-sm font-medium">
             <Link
               href="/home"
@@ -143,16 +149,29 @@ const Navbar = () => {
                 {openMenuIndex === index && (
                   <div className="absolute bg-white text-gray-700 shadow-lg mt-2 rounded w-64 py-2 z-50">
                     {menu.subItems.map((item, idx) => (
+            
                       <div key={idx} className="group relative">
-                        <Link
-                          href={item.href}
-                          className="flex justify-between items-center px-4 py-2 hover:bg-[#f27929] hover:text-white whitespace-nowrap"
-                        >
-                          {item.title}
-                          {item.subItems && (
-                            <FaChevronRight className="text-xs ml-2" />
-                          )}
-                        </Link>
+                        {item.isDownload ? (
+                          <a
+                            href={item.href}
+                            download
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex justify-between items-center px-4 py-2 hover:bg-[#f27929] hover:text-white whitespace-nowrap"
+                          >
+                            {item.title}
+                          </a>
+                        ) : (
+                          <Link
+                            href={item.href}
+                            className="flex justify-between items-center px-4 py-2 hover:bg-[#f27929] hover:text-white whitespace-nowrap"
+                          >
+                            {item.title}
+                            {item.subItems && (
+                              <FaChevronRight className="text-xs ml-2" />
+                            )}
+                          </Link>
+                        )}
                         {item.subItems && openMenuIndex === index && (
                           <div className="absolute left-full top-0 bg-white shadow-lg rounded w-56 py-2 hidden group-hover:block">
                             {item.subItems.map((sub, i) => (
@@ -173,17 +192,14 @@ const Navbar = () => {
               </div>
             ))}
 
-            {/* <Link href="/services" className="hover:text-blue-300 whitespace-nowrap">Service</Link> */}
             <Link
               href="/Contact"
               className="hover:text-orange-400 whitespace-nowrap"
             >
               Contact
             </Link>
-            {/* <Link href="/blog" className="hover:text-blue-300 whitespace-nowrap">Blog</Link> */}
           </div>
 
-          {/* CTA */}
           <div className="hidden md:block">
             <Link
               href="/quotepage"
@@ -193,7 +209,6 @@ const Navbar = () => {
             </Link>
           </div>
 
-          {/* Mobile Hamburger */}
           <div className="md:hidden">
             <button onClick={() => setIsDrawerOpen(true)}>
               <svg
@@ -214,7 +229,6 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* Mobile Drawer */}
       <div
         className={`fixed top-0 left-0 w-64 h-full bg-white shadow-lg z-50 transform transition-transform duration-300 ${
           isDrawerOpen ? "translate-x-0" : "-translate-x-full"
@@ -250,22 +264,20 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link href="/page1" onClick={() => setIsDrawerOpen(false)}>
-              Page 1
+            <Link href="/cartage" onClick={() => setIsDrawerOpen(false)}>
+              Transportation
             </Link>
           </li>
           <li>
-            <Link href="/page2" onClick={() => setIsDrawerOpen(false)}>
-              Page 2
+            <Link href="/inspection" onClick={() => setIsDrawerOpen(false)}>
+              Warehouse & Distribution
             </Link>
           </li>
-          {/* <li><Link href="/services" onClick={() => setIsDrawerOpen(false)}>Service</Link></li> */}
           <li>
             <Link href="/Contact" onClick={() => setIsDrawerOpen(false)}>
               Contact
             </Link>
           </li>
-          {/* <li><Link href="/blog" onClick={() => setIsDrawerOpen(false)}>Blog</Link></li> */}
           <li>
             <Link
               href="/quotepage"
@@ -278,7 +290,6 @@ const Navbar = () => {
         </ul>
       </div>
 
-      {/* Overlay */}
       {isDrawerOpen && (
         <div
           className="fixed inset-0 bg-black opacity-50 z-40"

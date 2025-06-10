@@ -33,24 +33,21 @@ const newsItems: NewsItem[] = [
 const NewsSection: React.FC = () => {
   return (
     <ContentWrapper>
-      <section className="px-4 md:px-20 py-12 bg-white">
-        <div className="flex flex-col lg:flex-row gap-10 items-start">
+      <section className="w-full py-12 bg-white">
+        <div className="flex flex-col lg:flex-row gap-10 items-start w-[85%] mx-auto">
           {/* Text Column */}
-          <div className="w-full lg:w-1/3 space-y-6 lg:pl-37">
+          <div className="w-full lg:w-1/3 space-y-6">
             <h2 className="text-2xl md:text-2xl font-bold text-black leading-snug">
               News updates and useful tips for logistics & transportation
             </h2>
             <p className="text-gray-600 text-sm">
               Provide you news updates to help you handle logistics challenges as well as crucial information about transportation for businesses
             </p>
-            {/* <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-md">
-              See more
-            </button> */}
           </div>
 
           {/* Cards Section */}
           <div className="w-full lg:w-2/3">
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-2">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {newsItems.map((item) => (
                 <div
                   key={item.id}

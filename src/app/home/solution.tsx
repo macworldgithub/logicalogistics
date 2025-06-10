@@ -3,23 +3,23 @@ import ContentWrapper from '../../../utils/ContentWrapper';
 const solutions = [
   {
     title: "Wharf Cartage",
-    image: "/sol1.png", // Replace with your actual file
+    image: "/sol1.webp", // Replace with your actual file
   },
   {
     title: "Freight Movement",
-    image: "/sol2.png",
+    image: "/sol2.webp",
   },
   {
     title: "Bio Security",
-    image: "/sol3.png",
+    image: "/sol3.webp",
   },
   {
     title: "Inventory Management",
-    image: "/sol4.png",
+    image: "/sol4.webp",
   },
   {
     title: "movement",
-    image: "/sol5.png",
+    image: "/sol5.webp",
   },
 ];
 
@@ -41,7 +41,7 @@ export default function SolutionsSection() {
               alt={item.title}
               width={400}
               height={300}
-              className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 w-[99vm]"
+              className=" h-full object-cover transition-transform duration-300 group-hover:scale-105 w-[99vm]"
             />
           </div>
         ))}

@@ -26,7 +26,7 @@ const Docking = () => {
 
         <div className="w-full flex justify-center mb-10">
           <Image
-            src="/plane.png"
+            src="/plane.webp"
             alt="Wharf Cartage"
             width={750}
             height={538}
@@ -51,7 +51,7 @@ const Docking = () => {
         </p>
 
         <Image
-          src="/heat.png"
+          src="/heat.webp"
           alt="Wharf Cartage"
           width={750}
           height={538}
@@ -75,7 +75,7 @@ const Docking = () => {
         </p>
 
         <Image
-          src="/truck1.png"
+          src="/truck1.webp"
           alt="Wharf Cartage"
           width={750}
           height={538}

@@ -119,7 +119,7 @@ const SidebarServices: FC = () => {
         {/* Support Box */}
         <div className="relative rounded-lg overflow-hidden shadow-md">
           <Image
-            src="/support.png"
+            src="/support.webp"
             alt="Support"
             width={400}
             height={300}

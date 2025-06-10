@@ -27,7 +27,7 @@ const ProcessSection: React.FC = () => {
       <div className="flex flex-col lg:flex-row gap-8 items-start">
         {/* Video instead of image */}
         <div className="w-full lg:w-1/2">
-          <div className="relative w-full h-64 md:h-96 rounded-md overflow-hidden shadow-md">
+          <div className="relative w-full h-64 md:h-110 rounded-md overflow-hidden shadow-md">
             <video
               ref={videoRef}
               onClick={handleVideoClick}

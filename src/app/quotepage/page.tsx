@@ -1,32 +1,110 @@
-import React from "react";
-import Image from "next/image";
-import Navbar from "../../../Components/Navbar";
-// import Footer from "../../../Components/Footer";
-import cartage from "../assets/cartage.png";
+"use client";
+
+import React, { useState } from "react";
 import { FaShieldAlt, FaClock, FaLock, FaArrowRight } from "react-icons/fa";
+import PageWrapper from "../../../utils/PageWrapper";
+import PageHeader from "../../../common/PageHeader";
+
+type QuoteFormData = {
+  origin: string;
+  destination: string;
+  commodity: string;
+  serviceType: string;
+  package: string;
+  dimensions: string;
+  options: string[];
+  name: string;
+  email: string;
+  phone: string;
+  comments: string;
+};
 
 const QuotePage = () => {
+  const [formData, setFormData] = useState<QuoteFormData>({
+    origin: "",
+    destination: "",
+    commodity: "",
+    serviceType: "",
+    package: "",
+    dimensions: "",
+    options: [],
+    name: "",
+    email: "",
+    phone: "",
+    comments: "",
+  });
+
+  const [formErrors, setFormErrors] = useState<string[]>([]);
+  const [message, setMessage] = useState("");
+  const [selectedTab, setSelectedTab] = useState<"shipment" | "warehouse">("shipment");
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value, type } = e.target;
+
+    if (type === "checkbox") {
+      const checked = (e.target as HTMLInputElement).checked;
+      setFormData((prev) => ({
+        ...prev,
+        options: checked ? [value] : [],
+      }));
+    } else {
+      setFormData((prev) => ({ ...prev, [name]: value }));
+    }
+
+    setFormErrors((prev) => prev.filter((error) => error !== name));
+  };
+
+  const validateForm = () => {
+    const errors: string[] = [];
+
+    const fieldsToValidate =
+      selectedTab === "shipment"
+        ? Object.keys(formData)
+        : ["name", "email", "phone", "comments"];
+
+    for (const field of fieldsToValidate) {
+      const value = formData[field as keyof QuoteFormData];
+      if ((Array.isArray(value) && value.length === 0) || (!Array.isArray(value) && !value)) {
+        errors.push(field);
+      }
+    }
+
+    setFormErrors(errors);
+    return errors.length === 0;
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!validateForm()) {
+      setMessage("Please fill in all required fields.");
+      return;
+    }
+
+    try {
+      const response = await fetch("/api/GetInTouch", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      const data = await response.json();
+      setMessage(data.message || "Submission successful!");
+    } catch {
+      setMessage("Something went wrong. Please try again.");
+    }
+  };
+
+  const hasError = (field: string) => formErrors.includes(field);
+
   return (
-    <div className="w-full overflow-hidden bg-white text-gray-800 font-sans">
-      <Navbar />
-
-      {/* Hero Image */}
-      <div className="relative w-full h-[400px]">
-        <Image
-          src={cartage}
-          alt="Cartage"
-          layout="fill"
-          objectFit="cover"
-          className="z-0"
-        />
-        <div className="absolute inset-0 bg-white bg-opacity-30 flex items-center justify-center">
-          <h1 className="text-4xl font-bold text-black">Get A Quote</h1>
-        </div>
-      </div>
-
-      {/* Form Section */}
+    <PageWrapper>
+      <PageHeader title="Get a quote" breadcrumb="Get a quote" />
       <section className="max-w-6xl mx-auto px-4 py-16">
-        <h2 className="text-2xl font-semibold mb-2">Fill out the form and we will get in touch</h2>
+        <h2 className="text-2xl font-semibold mb-2">
+          Fill out the form and we will get in touch
+        </h2>
 
         {/* Features */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10 text-sm text-gray-700">
@@ -45,84 +123,160 @@ const QuotePage = () => {
         </div>
 
         {/* Form */}
-        <form className="bg-[#f9f9f9] p-8 rounded-lg shadow-md space-y-10">
-          {/* Shipment Info */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Shipment infor</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="flex flex-col">
-                <label className="mb-1 text-sm">Origin</label>
-                <select className="border p-2 rounded bg-white text-sm">
-                  <option>Select Origin</option>
-                </select>
-              </div>
-              <div className="flex flex-col">
-                <label className="mb-1 text-sm">Destination</label>
-                <select className="border p-2 rounded bg-white text-sm">
-                  <option>Select Destination</option>
-                </select>
-              </div>
-              <div className="flex flex-col">
-                <label className="mb-1 text-sm">Commodity</label>
-                <select className="border p-2 rounded bg-white text-sm">
-                  <option>Select Commodity</option>
-                </select>
-              </div>
-              <div className="flex flex-col">
-                <label className="mb-1 text-sm">Service Type</label>
-                <select className="border p-2 rounded bg-white text-sm">
-                  <option>Select Service</option>
-                </select>
-              </div>
-              <div className="flex flex-col">
-                <label className="mb-1 text-sm">Package</label>
-                <select className="border p-2 rounded bg-white text-sm">
-                  <option>Select</option>
-                </select>
-              </div>
-              <div className="flex flex-col">
-                <label className="mb-1 text-sm">Dimensions</label>
-                <select className="border p-2 rounded bg-white text-sm">
-                  <option>Select</option>
-                </select>
-              </div>
-            </div>
-
-            {/* Checkboxes */}
-            <div className="flex flex-wrap gap-4 mt-6 text-sm">
-              <label className="flex items-center gap-2">
-                <input type="checkbox" className="accent-orange-500" />
-                Insurance
-              </label>
-              <label className="flex items-center gap-2">
-                <input type="checkbox" className="accent-orange-500" />
-                Packaging
-              </label>
-              <label className="flex items-center gap-2">
-                <input type="checkbox" className="accent-orange-500" />
-                Fast delivery
-              </label>
-            </div>
+        <form
+          onSubmit={handleSubmit}
+          className="bg-[#f9f9f9] p-8 rounded-lg shadow-md space-y-10 text-black"
+        >
+          {/* Toggle Headings */}
+          <div className="flex justify-between items-start">
+            <h3
+              className={`text-lg mb-4 cursor-pointer px-2 py-1 rounded transition ${
+                selectedTab === "shipment"
+                  ? "bg-orange-300 text-orange-500 font-semibold"
+                  : "hover:text-orange-500 hover:bg-orange-50"
+              }`}
+              onClick={() => setSelectedTab("shipment")}
+            >
+              Shipment Info
+            </h3>
+            <h3
+              className={`text-md mb-3 cursor-pointer px-2 py-1 rounded transition ${
+                selectedTab === "warehouse"
+                  ? "font-bold text-orange-500 bg-orange-300"
+                  : "hover:text-orange-500 hover:font-bold hover:bg-orange-50"
+              }`}
+              onClick={() => setSelectedTab("warehouse")}
+            >
+              Warehouse/Storage
+            </h3>
           </div>
 
-          {/* Personal Info */}
+          {selectedTab === "shipment" && (
+            <>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {[
+                  {
+                    name: "origin",
+                    label: "Origin",
+                    options: [
+                      "VIC",
+                      "NSW",
+                      "QLD",
+                      "WA",
+                      "SA",
+                      "ACT",
+                      "NT",
+                      "TAS",
+                      "International",
+                    ],
+                  },
+                  {
+                    name: "destination",
+                    label: "Destination",
+                    options: [
+                      "VIC Metro",
+                      "VIC Rural",
+                      "Wharf",
+                      "Logica Warehouse",
+                      "Warehouse External",
+                    ],
+                  },
+                  {
+                    name: "commodity",
+                    label: "Commodity",
+                    options: ["Electronics", "Furniture", "Food"],
+                  },
+                  {
+                    name: "serviceType",
+                    label: "Service Type",
+                    options: ["Air Freight", "Ocean Freight", "Ground Shipping"],
+                  },
+                  {
+                    name: "package",
+                    label: "Package",
+                    options: ["Box", "Pallet", "Crate"],
+                  },
+                  {
+                    name: "dimensions",
+                    label: "Dimensions",
+                    options: ["Small", "Medium", "Large"],
+                  },
+                ].map(({ name, label, options }) => (
+                  <div className="flex flex-col" key={name}>
+                    <label className="mb-1 text-sm">{label}</label>
+                    <select
+                      name={name}
+                      value={formData[name as keyof QuoteFormData] as string}
+                      onChange={handleChange}
+                      className={`border p-2 rounded bg-white text-sm ${
+                        hasError(name) ? "border-red-500" : ""
+                      }`}
+                    >
+                      <option value="">Select {label}</option>
+                      {options.map((opt) => (
+                        <option key={opt} value={opt}>
+                          {opt}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                ))}
+              </div>
+
+              {/* Checkboxes */}
+              <div className="flex flex-wrap gap-4 mt-6 text-sm">
+                {["Insurance", "Packaging", "Fast delivery"].map((option) => (
+                  <label key={option} className="flex items-center gap-2">
+                    <input
+                      type="checkbox"
+                      name="options"
+                      value={option}
+                      checked={formData.options.includes(option)}
+                      onChange={handleChange}
+                      className="accent-orange-500"
+                    />
+                    {option}
+                  </label>
+                ))}
+                {hasError("options") && (
+                  <p className="text-red-500 text-sm mt-2">
+                    Please select one option.
+                  </p>
+                )}
+              </div>
+            </>
+          )}
+
+          {/* Common Fields */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Personal infor</h3>
+            <h3 className="text-lg font-semibold mb-4">Personal Info</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <input
-                type="text"
-                placeholder="Enter Name"
-                className="border p-2 rounded bg-white text-sm"
-              />
-              <input
-                type="email"
-                placeholder="Your email"
-                className="border p-2 rounded bg-white text-sm"
-              />
-              <input
-                type="text"
-                placeholder="Your phone number"
-                className="border p-2 rounded bg-white text-sm md:col-span-2"
+              {[
+                { name: "name", placeholder: "Enter Name", type: "text" },
+                { name: "email", placeholder: "Your email", type: "email" },
+                { name: "phone", placeholder: "Your phone number", type: "text" },
+              ].map(({ name, placeholder, type }) => (
+                <input
+                  key={name}
+                  type={type}
+                  name={name}
+                  value={formData[name as keyof QuoteFormData] as string}
+                  onChange={handleChange}
+                  placeholder={placeholder}
+                  className={`border p-2 rounded bg-white text-sm ${
+                    hasError(name) ? "border-red-500" : ""
+                  }`}
+                />
+              ))}
+              <textarea
+                name="comments"
+                placeholder="Comments"
+                value={formData.comments}
+                onChange={handleChange}
+                rows={4}
+                className={`md:col-span-2 border p-2 rounded bg-white text-sm ${
+                  hasError("comments") ? "border-red-500" : ""
+                }`}
               />
             </div>
           </div>
@@ -135,12 +289,13 @@ const QuotePage = () => {
             >
               Send information <FaArrowRight />
             </button>
+            {message && (
+              <p className="mt-4 text-sm text-green-500">{message}</p>
+            )}
           </div>
         </form>
       </section>
-
-      {/* <Footer /> */}
-    </div>
+    </PageWrapper>
   );
 };
 

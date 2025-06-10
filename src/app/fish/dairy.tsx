@@ -25,7 +25,7 @@ const Dairy = () => {
 
         <div className="w-full flex justify-center mb-10">
           <Image
-            src="/write.png"
+            src="/write.webp"
             alt="Wharf Cartage"
             width={750}
             height={538}

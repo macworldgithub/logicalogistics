@@ -96,7 +96,7 @@ const AboutCompany = () => {
       {/* Right Section */}
       <div className="w-full lg:w-1/2 h-[400px] md:h-[500px] lg:h-auto relative">
         <Image
-          src="/ship_container.png" // Replace with actual image path
+          src="/ship_container.webp" // Replace with actual image path
           alt="Cargo Ship"
           layout="fill"
           objectFit="cover"
