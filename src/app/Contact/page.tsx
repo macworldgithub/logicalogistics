@@ -1,13 +1,7 @@
-// Import Google Fonts and custom components
-// import Image from "next/image";
 import { MapPin, Mail, Phone } from "lucide-react";
 import Navbar from "../../../Components/Navbar";
-// import cartage from "../assets/cartage.png";
-// import SidebarServices from "../../../common/services";
 import PageHeader from "../../../common/PageHeader";
-// import PageWrapper from "../../../utils/PageWrapper";
 import PageWrapper from "./../../../utils/PageWrapper";
-
 export default function Contact() {
   return (
     <PageWrapper>
@@ -28,16 +22,6 @@ export default function Contact() {
               Contact us on direct, by phone or fill out the form to receive a
               free consultation from our enthusiastic staff.
             </p>
-
-            <div className="mb-4 text-gray-800 text-xs">
-              <p className="font-semibold mb-2">Services Offered:</p>
-              <ul className="list-disc list-inside space-y-1">
-                <li>Unpacking (Goods Inspection)</li>
-                <li>Tailgate Inspection</li>
-                <li>Deep Burial</li>
-              </ul>
-            </div>
-
             <div className="space-y-8 text-sm">
               <div className="flex items-start gap-4">
                 <Phone className="text-orange-500 w-5 h-5 mt-1" />
